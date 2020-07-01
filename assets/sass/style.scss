@@ -24,9 +24,17 @@
         &.align-items-center {
             @include prefixes(align-items, center);
         }
+    
+        &.align-items-flex-end {
+            @include prefixes(align-items, flex-end);
+        }
 
         &.justify-content-flex-end{
             @include prefixes(justify-content, flex-end);
+        }
+
+        &.flex-wrap-wrap{
+            @include prefixes(flex-wrap, wrap);
         }
     }
 
@@ -94,6 +102,8 @@ section.titled {
     h1 {
         margin: 0px 0px 65px 0px;
         font-size: 50px;
+        line-height: 55px;
+        text-transform: capitalize;
     }
 }
 
@@ -225,6 +235,32 @@ header {
     }
 }
 
+#banner {
+    height:50vh;
+    position: relative;
+
+    h1 , h2 {
+        color: #FFFFFF;
+        line-height: 1;
+        font-weight: 900;
+    }
+
+    h2 {
+        font-size: 22px;
+        letter-spacing: 12px;
+        text-transform: uppercase;
+    }
+
+    h1 {
+        font-size: 120px;
+        margin-top: 10px;
+    }
+}
+
+.btn {
+    @include btn;
+}
+
 /* Home template */
     /* slick slider */
     #intro-slider {
@@ -258,7 +294,7 @@ header {
                 text-transform: uppercase;
             }
 
-            div.title {
+            .title {
                 font-weight: 900;
                 font-size: 100px;
                 line-height: 100px;
@@ -267,9 +303,6 @@ header {
                 margin-bottom:100px
             }
 
-            .btn {
-                @include btn;
-            }
         }
         
         .slick-prev, .slick-next {
@@ -387,10 +420,175 @@ header {
         }
     }
 
+    @keyframes overlay-in {
+        from {background-position-x: 0px;}
+        to {background-position-x: -50px;}
+    }
+    
+    @keyframes overlay-out {
+        from {background-position-x: -50px;}
+        to {background-position-x: 0px;}
+    }
+
+    @keyframes overlay-opacity-in {
+        from {background: rgba(0, 0, 0, 0.28);}
+        to {background:transparent}
+    }
+    
+    @keyframes overlay-opacity-out {
+        from {background:transparent}
+        to {background: rgba(0, 0, 0, 0.28);}
+    }
+    
+    #strengths {
+
+        #strengths-grid {
+            @include prefixes(display,grid );
+            @include prefixes(grid-template-columns,repeat(1,1fr) );
+            @include prefixes(grid-gap, 10px );
+
+            & > div {
+                height:300px;
+                position: relative;
+                
+                background-repeat: no-repeat;
+                background-size: calc( 100% + 50px );
+                background-position: center center;
+                @include prefixes(animation-name, overlay-out );
+                @include prefixes(animation-duration, 350ms );
+                @include prefixes(animation-fill-mode, forwards);
+
+                &:hover , &:focus {
+                    background-position-x: -50px;
+                    @include prefixes(animation-name, overlay-in );
+                    @include prefixes(animation-duration, 350ms );
+                    @include prefixes(animation-fill-mode, forwards);
+
+                    .overlay {
+                        @include prefixes(animation-name, overlay-opacity-in );
+                        @include prefixes(animation-duration, 350ms );
+                        @include prefixes(animation-fill-mode, forwards);
+                    }
+                }
+
+                .overlay {
+                    @include prefixes(animation-name, overlay-opacity-out );
+                    @include prefixes(animation-duration, 350ms );
+                    @include prefixes(animation-fill-mode, forwards);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height:100%;
+                    padding: 35px;
+
+                    h2 , p {
+                        font-size: 23px;
+                        margin: 0px 0px 15px 0px;
+                        line-height: 20px;
+                        color:#fff
+                    }
+
+                    h2 {
+                        font-weight: 700;
+                    }
+
+                    p {
+                        font-weight:400;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+    }
+
+    #what-to-do {
+        #what-to-do-grid {
+            @include prefixes(display,grid );
+            @include prefixes(grid-template-columns,repeat(3,1fr) );
+            @include prefixes(grid-gap, 35px );
+
+            @media (max-width:768px){
+                & {
+                    @include prefixes(grid-template-columns,repeat(1,1fr) );
+                }
+            }
+
+            i {
+                margin-right:15px
+            }
+
+            h2 {
+                color: #7C7E88;
+                font-weight: 900;
+                font-size: 16px;
+                margin-bottom:5px;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: normal;
+                color: rgba(68, 71, 86, .7);
+                line-height: 24px;
+            }
+        }
+    }
+
 /* About Template */
-
+#about {
+    h2 {
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 16px;
+        @include main-color(color)
+    }
+    h1 {
+        margin-bottom: 15px;
+    }
+    p {
+        color:rgba(68, 71, 86, 0.7);
+        font-size: 14pt;
+        line-height: 24px;
+        margin: 0 10%;
+    }
+}
 /*  portfolio template */
+#portfolio-banner {
+    height:100vh;
+    background-size: cover;
+    background-position: center center;
+    
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.39);
+        width: 100%;
+        height: 100%;    
 
+        h1 {
+            margin: 0px 0px 35px 0px;
+            padding: 0px 0px 0px 0px;
+            text-shadow: 0px 0px 25px #626262;
+            color: #fff;
+            text-transform: capitalize;
+            font-size: 50px;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.91);
+            font-size: 16px;
+            margin: 0px 0px 55px 0px;
+        }
+    }
+}
 /* Contact template */
 
 /* footer */
+footer {
+    background-color: #2f313e;
+    color: #c1c1c5;
+    padding: 20px 0;
+
+    img {
+        width:160px
+    }
+}

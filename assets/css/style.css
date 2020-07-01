@@ -34,12 +34,26 @@
   -o-align-items: center;
   align-items: center;
 }
+.display-flex.align-items-flex-end {
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  -ms-align-items: flex-end;
+  -o-align-items: flex-end;
+  align-items: flex-end;
+}
 .display-flex.justify-content-flex-end {
   -webkit-justify-content: flex-end;
   -moz-justify-content: flex-end;
   -ms-justify-content: flex-end;
   -o-justify-content: flex-end;
   justify-content: flex-end;
+}
+.display-flex.flex-wrap-wrap {
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 /* general selectors */
@@ -88,6 +102,8 @@ section.titled.no-padding {
 section.titled h1 {
   margin: 0px 0px 65px 0px;
   font-size: 50px;
+  line-height: 55px;
+  text-transform: capitalize;
 }
 
 /* header */
@@ -232,6 +248,37 @@ header .fa-times {
   }
 }
 
+#banner {
+  height: 50vh;
+  position: relative;
+}
+#banner h1, #banner h2 {
+  color: #FFFFFF;
+  line-height: 1;
+  font-weight: 900;
+}
+#banner h2 {
+  font-size: 22px;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+}
+#banner h1 {
+  font-size: 120px;
+  margin-top: 10px;
+}
+
+.btn {
+  color: #FFFFFF;
+  padding: 16px 48px;
+  font-weight: 900;
+  border: 0;
+  border-radius: 100px;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: capitalize;
+  background-color: #ff0022;
+}
+
 /* Home template */
 /* slick slider */
 #intro-slider {
@@ -274,24 +321,13 @@ header .fa-times {
   margin-top: 0;
   text-transform: uppercase;
 }
-#intro-slider .slick-slide div.title {
+#intro-slider .slick-slide .title {
   font-weight: 900;
   font-size: 100px;
   line-height: 100px;
   margin: 0px 0px 85px 0px;
   color: #fff;
   margin-bottom: 100px;
-}
-#intro-slider .slick-slide .btn {
-  color: #FFFFFF;
-  padding: 16px 48px;
-  font-weight: 900;
-  border: 0;
-  border-radius: 100px;
-  font-size: 14px;
-  text-decoration: none;
-  text-transform: capitalize;
-  background-color: #ff0022;
 }
 #intro-slider .slick-prev, #intro-slider .slick-next {
   width: auto;
@@ -461,9 +497,243 @@ header .fa-times {
   width: 100%;
 }
 
+@keyframes overlay-in {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -50px;
+  }
+}
+@keyframes overlay-out {
+  from {
+    background-position-x: -50px;
+  }
+  to {
+    background-position-x: 0px;
+  }
+}
+@keyframes overlay-opacity-in {
+  from {
+    background: rgba(0, 0, 0, 0.28);
+  }
+  to {
+    background: transparent;
+  }
+}
+@keyframes overlay-opacity-out {
+  from {
+    background: transparent;
+  }
+  to {
+    background: rgba(0, 0, 0, 0.28);
+  }
+}
+#strengths #strengths-grid {
+  -webkit-display: grid;
+  -moz-display: grid;
+  -ms-display: grid;
+  -o-display: grid;
+  display: grid;
+  -webkit-grid-template-columns: repeat(1, 1fr);
+  -moz-grid-template-columns: repeat(1, 1fr);
+  -ms-grid-template-columns: repeat(1, 1fr);
+  -o-grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  -webkit-grid-gap: 10px;
+  -moz-grid-gap: 10px;
+  -ms-grid-gap: 10px;
+  -o-grid-gap: 10px;
+  grid-gap: 10px;
+}
+#strengths #strengths-grid > div {
+  height: 300px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: calc( 100% + 50px );
+  background-position: center center;
+  -webkit-animation-name: overlay-out;
+  -moz-animation-name: overlay-out;
+  -ms-animation-name: overlay-out;
+  -o-animation-name: overlay-out;
+  animation-name: overlay-out;
+  -webkit-animation-duration: 350ms;
+  -moz-animation-duration: 350ms;
+  -ms-animation-duration: 350ms;
+  -o-animation-duration: 350ms;
+  animation-duration: 350ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+#strengths #strengths-grid > div:hover, #strengths #strengths-grid > div:focus {
+  background-position-x: -50px;
+  -webkit-animation-name: overlay-in;
+  -moz-animation-name: overlay-in;
+  -ms-animation-name: overlay-in;
+  -o-animation-name: overlay-in;
+  animation-name: overlay-in;
+  -webkit-animation-duration: 350ms;
+  -moz-animation-duration: 350ms;
+  -ms-animation-duration: 350ms;
+  -o-animation-duration: 350ms;
+  animation-duration: 350ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+#strengths #strengths-grid > div:hover .overlay, #strengths #strengths-grid > div:focus .overlay {
+  -webkit-animation-name: overlay-opacity-in;
+  -moz-animation-name: overlay-opacity-in;
+  -ms-animation-name: overlay-opacity-in;
+  -o-animation-name: overlay-opacity-in;
+  animation-name: overlay-opacity-in;
+  -webkit-animation-duration: 350ms;
+  -moz-animation-duration: 350ms;
+  -ms-animation-duration: 350ms;
+  -o-animation-duration: 350ms;
+  animation-duration: 350ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+#strengths #strengths-grid > div .overlay {
+  -webkit-animation-name: overlay-opacity-out;
+  -moz-animation-name: overlay-opacity-out;
+  -ms-animation-name: overlay-opacity-out;
+  -o-animation-name: overlay-opacity-out;
+  animation-name: overlay-opacity-out;
+  -webkit-animation-duration: 350ms;
+  -moz-animation-duration: 350ms;
+  -ms-animation-duration: 350ms;
+  -o-animation-duration: 350ms;
+  animation-duration: 350ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 35px;
+}
+#strengths #strengths-grid > div .overlay h2, #strengths #strengths-grid > div .overlay p {
+  font-size: 23px;
+  margin: 0px 0px 15px 0px;
+  line-height: 20px;
+  color: #fff;
+}
+#strengths #strengths-grid > div .overlay h2 {
+  font-weight: 700;
+}
+#strengths #strengths-grid > div .overlay p {
+  font-weight: 400;
+  line-height: normal;
+}
+
+#what-to-do #what-to-do-grid {
+  -webkit-display: grid;
+  -moz-display: grid;
+  -ms-display: grid;
+  -o-display: grid;
+  display: grid;
+  -webkit-grid-template-columns: repeat(3, 1fr);
+  -moz-grid-template-columns: repeat(3, 1fr);
+  -ms-grid-template-columns: repeat(3, 1fr);
+  -o-grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-grid-gap: 35px;
+  -moz-grid-gap: 35px;
+  -ms-grid-gap: 35px;
+  -o-grid-gap: 35px;
+  grid-gap: 35px;
+}
+@media (max-width: 768px) {
+  #what-to-do #what-to-do-grid {
+    -webkit-grid-template-columns: repeat(1, 1fr);
+    -moz-grid-template-columns: repeat(1, 1fr);
+    -ms-grid-template-columns: repeat(1, 1fr);
+    -o-grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#what-to-do #what-to-do-grid i {
+  margin-right: 15px;
+}
+#what-to-do #what-to-do-grid h2 {
+  color: #7C7E88;
+  font-weight: 900;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+#what-to-do #what-to-do-grid p {
+  font-size: 16px;
+  font-weight: normal;
+  color: rgba(68, 71, 86, 0.7);
+  line-height: 24px;
+}
+
 /* About Template */
+#about h2 {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 16px;
+  color: #ff0022;
+}
+#about h1 {
+  margin-bottom: 15px;
+}
+#about p {
+  color: rgba(68, 71, 86, 0.7);
+  font-size: 14pt;
+  line-height: 24px;
+  margin: 0 10%;
+}
+
 /*  portfolio template */
+#portfolio-banner {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+}
+#portfolio-banner .overlay {
+  background-color: rgba(0, 0, 0, 0.39);
+  width: 100%;
+  height: 100%;
+}
+#portfolio-banner .overlay h1 {
+  margin: 0px 0px 35px 0px;
+  padding: 0px 0px 0px 0px;
+  text-shadow: 0px 0px 25px #626262;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 50px;
+}
+#portfolio-banner .overlay p {
+  color: rgba(255, 255, 255, 0.91);
+  font-size: 16px;
+  margin: 0px 0px 55px 0px;
+}
+
 /* Contact template */
 /* footer */
+footer {
+  background-color: #2f313e;
+  color: #c1c1c5;
+  padding: 20px 0;
+}
+footer img {
+  width: 160px;
+}
 
 /*# sourceMappingURL=style.css.map */
