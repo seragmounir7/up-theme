@@ -209,11 +209,18 @@ get_header();
         </div>
     </div>
 </section>
-<section id="parents" class="titled">
+<section id="partners" class="titled">
     <div class="container">
-        <h1 class="text-center">our parents</h1>
-        <div id="parents-grid">
-            
+        <h1 class="text-center">our partners</h1>
+        <div id="partners-grid">
+            <div><img src="<?php bloginfo('template_directory'); ?>/assets/img/partner-1.jpg" alt=""></div>
+            <div><img src="<?php bloginfo('template_directory'); ?>/assets/img/partner-2.jpg" alt=""></div>
+            <div><img src="<?php bloginfo('template_directory'); ?>/assets/img/partner-3.jpg" alt=""></div>
+            <div><img src="<?php bloginfo('template_directory'); ?>/assets/img/partner-4.jpg" alt=""></div>
+            <div><img src="<?php bloginfo('template_directory'); ?>/assets/img/partner-5.jpg" alt=""></div>
+            <div><img src="<?php bloginfo('template_directory'); ?>/assets/img/partner-6.jpg" alt=""></div>
+            <div><img src="<?php bloginfo('template_directory'); ?>/assets/img/partner-7.jpg" alt=""></div>
+            <div><img src="<?php bloginfo('template_directory'); ?>/assets/img/partner-8.jpg" alt=""></div>
         </div>
     </div>
 </section>
