@@ -605,6 +605,13 @@ header .fa-times {
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
+#strengths #strengths-grid > div:hover h2, #strengths #strengths-grid > div:hover p, #strengths #strengths-grid > div:focus h2, #strengths #strengths-grid > div:focus p {
+  -webkit-transform: translateX(-15px);
+  -moz-transform: translateX(-15px);
+  -ms-transform: translateX(-15px);
+  -o-transform: translateX(-15px);
+  transform: translateX(-15px);
+}
 #strengths #strengths-grid > div .overlay {
   -webkit-animation-name: overlay-opacity-out;
   -moz-animation-name: overlay-opacity-out;
@@ -633,6 +640,11 @@ header .fa-times {
   margin: 0px 0px 15px 0px;
   line-height: 20px;
   color: #fff;
+  -webkit-transition-duration: 350ms;
+  -moz-transition-duration: 350ms;
+  -ms-transition-duration: 350ms;
+  -o-transition-duration: 350ms;
+  transition-duration: 350ms;
 }
 #strengths #strengths-grid > div .overlay h2 {
   font-weight: 700;
@@ -670,6 +682,7 @@ header .fa-times {
 }
 #what-to-do #what-to-do-grid i {
   margin-right: 15px;
+  font-size: 20px;
 }
 #what-to-do #what-to-do-grid h2 {
   color: #7C7E88;
@@ -711,15 +724,16 @@ header .fa-times {
 }
 
 /* About Template */
+#about h1 {
+  margin-bottom: 15px;
+  color: #444756;
+}
 #about h2 {
   letter-spacing: 4px;
   text-transform: uppercase;
   font-weight: 900;
   font-size: 16px;
   color: #ff0022;
-}
-#about h1 {
-  margin-bottom: 15px;
 }
 #about p {
   color: rgba(68, 71, 86, 0.7);
