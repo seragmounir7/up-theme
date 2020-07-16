@@ -61,13 +61,13 @@ img{
 
 /*container*/
 .container {
-    max-width: 95%;
+    width: 95%;
     margin:0 auto
 }
 
 @media (min-width:1200px){
     .container {
-        max-width:1140px
+        width:1140px
     }
 }
 
@@ -419,8 +419,9 @@ header {
                 margin: 0 0 10px;
             }
         }
-        img {
-            width:100%
+        #choice-img {
+            background-repeat: no-repeat;
+            background-size: cover;
         }
     }
 
@@ -584,6 +585,7 @@ header {
     }
 }
 /*  portfolio template */
+
 #portfolio-banner {
     height:100vh;
     background-size: cover;
@@ -610,6 +612,134 @@ header {
         }
     }
 }
+
+/*
+$yellow:#FFD568;
+$yellow-light:#FFF2D1;
+$pink:#FF766D;
+$pink-light:#FFC8C3;
+$blue:#91E3FF;
+$blue-light:#D8F5FF;
+*/
+
+#portfolio {
+  @include prefixes(display,flex );
+  background:#fff;
+  width:100%;
+  overflow:hidden;
+  color:#ffffff99;
+  .title {
+    position:absolute;
+    top:10px;
+    left:20px;
+    font-size:16px;
+    font-weight:600;
+    line-height: 20px;
+    text-transform:capitalize;
+    letter-spacing:2px;
+    div {
+      background:#ffffff99;
+      width:20px;
+      height:2px;
+      margin:10px 0;
+    }
+  }
+  .credit {
+    position:absolute;
+    bottom:10px;
+    right:20px;
+    font-family: 'Sacramento', cursive;
+    a {
+      color:#fff;
+      text-decoration:none;
+      opacity:.6;
+      &:hover {
+        opacity:1;
+        text-decoration:underline;
+      }
+    }
+  }
+  .artboard{
+    position:relative;
+    margin-bottom: 20px;
+  }
+  .filterDivs{
+    @include prefixes(display,flex );
+    @include prefixes(flex-wrap,wrap );
+    .filterDiv {
+        width:33.33%;
+        display:block;
+        margin-bottom:16px;
+        transition:  .5s ease-in-out 0s;
+        background-size: cover;
+        position: relative;
+        & > div {
+            background-size: cover;
+            height: 100%;
+            margin:8px;
+        }
+        .overlay {
+            @include prefixes(display,flex );
+            @include prefixes(justify-content,center );
+            @include prefixes(align-items,center );
+            background-color: #000;
+            @include prefixes(transition-duration, 1000ms);
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height:100%;
+            opacity: 0;
+            cursor: pointer;
+            text-transform: capitalize;
+            &:focus , &:hover {
+                opacity: 1;
+                background-color: #000000b3;
+                color: #fff;
+            }
+        }
+    }
+    .Branding {
+      opacity:1;
+    }
+    .Print {
+      opacity:1;
+    }
+    .Digital {
+      opacity:1;
+    }
+    .hide {
+      visibility:hidden;
+      opacity:0;
+      width:0; height:0;
+      margin:0;
+      
+    }
+  }
+  
+  .filters {
+    position:relative;
+    margin:auto;
+    margin-top:10px;
+    // width:100%;
+    text-align:center;
+    div {
+      display:inline-block;
+      text-transform:capitalize;
+      cursor:pointer;
+      margin:4px;
+      color:#444756;
+    }
+    .active {
+      @include main-color(color);
+      border-bottom:1px solid;
+      @include main-color(border-color);
+    }
+  }
+}
+
+
+
 /* Contact template */
 #contact {
     #contact-grid {

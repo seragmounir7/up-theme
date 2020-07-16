@@ -31,7 +31,7 @@ get_header();
             <div class="slick-slide" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/slider3.jpg)">
                 <div>
                     <h2 class="text-center">premium</h2>
-                    <h1 class="title text-center">Solutions</h1>
+                    <h1 class="title text-center">Quality</h1>
                     <div class="display-flex justify-content-center">
                         <a href="<?php echo home_url(); ?>/about-us" class="btn">about us</a>
                     </div>
@@ -100,9 +100,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/why-choose-us.jpg" alt=""/>
-        </div>
+        <div id="choice-img" style="background-image:url('<?php bloginfo('template_directory'); ?>/assets/img/why-choose-us.jpg')"></div>
     </div>
 </section>
 <section id="strengths" class="titled">

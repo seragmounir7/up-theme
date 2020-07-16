@@ -12,15 +12,15 @@ get_header();
 <section id="contact" class="titled">
     <div class="container">
         <div id="contact-grid">
-            <iframe src="https://maps.google.com/maps?q=30.096564372669345,31.333372592926025&amp;hl=es;z=14&amp;output=embed"></iframe>
+            <iframe src="https://maps.google.com/maps?q=30.0690395,31.4882479&amp;hl=es;z=14&amp;output=embed"></iframe>
             <div>
                 <h1>Send Us A Message</h1>
                     <form action="">
-                    <input type="text"/>
-                    <input type="text"/>
-                    <input type="text"/>
-                    <input type="text"/>
-                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                    <input type="text" placeholder="Name"/>
+                    <input type="text" placeholder="Email"/>
+                    <input type="text" placeholder="Phone"/>
+                    <input type="text" placeholder="Subject"/>
+                    <textarea name="" id="" cols="30" rows="5" placeholder="Message"></textarea>
                     <button class="btn">Send Message</button>
                 </form>
             </div>
@@ -33,10 +33,6 @@ get_header();
                 <div>
                     <h2>phone</h2>
                     <span>+20 122 6460 772</span>
-                </div>
-                <div>
-                    <h2>Email</h2>
-                    <span>info@up-advertise.com</span>
                 </div>
             </div>
         </div>
