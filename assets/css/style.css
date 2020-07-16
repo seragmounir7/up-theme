@@ -745,7 +745,7 @@ header .fa-times {
 
 /*  portfolio template */
 #portfolio-banner {
-  height: 100vh;
+  height: 50vh;
   background-size: cover;
   background-position: center center;
 }
@@ -765,7 +765,7 @@ header .fa-times {
 #portfolio-banner .overlay p {
   color: rgba(255, 255, 255, 0.91);
   font-size: 16px;
-  margin: 0px 0px 55px 0px;
+  /*margin: 0px 0px 55px 0px;*/
 }
 
 /*
@@ -1005,6 +1005,7 @@ $blue-light:#D8F5FF;
   -o-transition-duration: 350ms;
   transition-duration: 350ms;
   resize: none;
+  font-family: "roboto", "sans-serif";
 }
 #contact #contact-grid input:focus, #contact #contact-grid textarea:focus {
   border-color: #ff0022;

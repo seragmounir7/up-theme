@@ -5,7 +5,6 @@ get_header();
 <section id="portfolio-banner" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/portfolio.jpg)">
     <div class="overlay display-flex justify-content-center align-items-center">
         <div>
-            <h1 class="text-center">download our portfolio</h1>
             <p class="text-center">Check out our latest work, download our porfolio to see what we've been up to</p>
             <!--
             <div class="display-flex justify-content-center">
@@ -240,30 +239,7 @@ get_header();
         </div>
     </div>
 </div>
-<script>
-    filterSelection('all');
-    function filterSelection(f){
-        var newActiveFilter=$(".filters ."+f);
-        if(newActiveFilter.hasClass('active')){
-            //do nothing
-        } else {
-            //update filter
-            $('.filter.active').removeClass('active');
-            newActiveFilter.addClass('active');
-            
-            //apply filter
-            if(f=='all'){
-                $('.filterDivs').children().removeClass('hide');
-                } else {
-                $('.filterDivs').children("."+f).removeClass('hide');
-                $('.filterDivs').children().not("."+f).addClass('hide');
-            }
-        }
-    }
 
-        $('.filterDiv').innerHeight($('.filterDiv').innerWidth()/2);
-    
-</script>
 <?php
     get_footer();
 ?>

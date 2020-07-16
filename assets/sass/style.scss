@@ -587,7 +587,7 @@ header {
 /*  portfolio template */
 
 #portfolio-banner {
-    height:100vh;
+    height:50vh;
     background-size: cover;
     background-position: center center;
     
@@ -608,7 +608,7 @@ header {
         p {
             color: rgba(255, 255, 255, 0.91);
             font-size: 16px;
-            margin: 0px 0px 55px 0px;
+            /*margin: 0px 0px 55px 0px;*/
         }
     }
 }
@@ -806,6 +806,7 @@ $blue-light:#D8F5FF;
             margin-bottom: 20px;
             @include prefixes(transition-duration,350ms );
             resize: none;
+            font-family: 'roboto' , 'sans-serif';
 
             &:focus {
                 border-color: $main-color
