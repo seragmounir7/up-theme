@@ -11,7 +11,7 @@ get_header();
                     <h2 class="text-center">boundless</h2>
                     <h1 class="title text-center">Creative</h1>
                     <div class="display-flex justify-content-center">
-                        <a href="<?php echo home_url(); ?>/about-us" class="btn">about us</a>
+                        <a href="<?php echo home_url(); ?>/about" class="btn">about us</a>
                     </div>
                 </div>
             </div>
@@ -22,7 +22,7 @@ get_header();
                     <h2 class="text-center">unlimited</h2>
                     <h1 class="title text-center">Solutions</h1>
                     <div class="display-flex justify-content-center">
-                        <a href="<?php echo home_url(); ?>/about-us" class="btn">about us</a>
+                        <a href="<?php echo home_url(); ?>/about" class="btn">about us</a>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@ get_header();
                     <h2 class="text-center">premium</h2>
                     <h1 class="title text-center">Quality</h1>
                     <div class="display-flex justify-content-center">
-                        <a href="<?php echo home_url(); ?>/about-us" class="btn">about us</a>
+                        <a href="<?php echo home_url(); ?>/about" class="btn">about us</a>
                     </div>
                 </div>
             </div>

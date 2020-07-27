@@ -2,16 +2,24 @@
 /* Template Name: Portfolio Template */
 get_header();
 ?>
+<!--
 <section id="portfolio-banner" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/portfolio.jpg)">
     <div class="overlay display-flex justify-content-center align-items-center">
         <div>
             <p class="text-center">Check out our latest work, download our porfolio to see what we've been up to</p>
-            <!--
+            
             <div class="display-flex justify-content-center">
                 <a rel="noopener noreferrer" target="_blank" href="/media/attachments/2019/09/20/up-portfolio.pdf" class="btn"><i class="fa fa-download" aria-hidden="true"></i> Download</a>
             </div>     
-            -->
+            
         </div>
+    </div>
+</section>
+-->
+<section id="banner" class="display-flex justify-content-center align-items-center" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/portfolio22.png)">
+    <div>
+        <h2 class="text-center">Take a tour to our</h2>
+        <h1 class="title text-center">Portfolio</h1>
     </div>
 </section>
 
@@ -239,6 +247,14 @@ get_header();
         </div>
     </div>
 </div>
+<section id="image-viewer">
+    <div id="image-container-wrapper">
+        <div class="image-container">
+            <img class="close-icon" src="<?php bloginfo('template_directory'); ?>/assets/img/close-icon.png" alt="colse icon">
+            <img id="image-viewed" src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/ZENA tissues box.jpg" alt="image that you viewing">
+        </div>
+    </div>
+</section>
 
 <?php
     get_footer();

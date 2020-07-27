@@ -20,7 +20,10 @@ function filterSelection(f){
     }
 }
 
-    $('.filterDiv').innerHeight($('.filterDiv').innerWidth()/2);
+    $('.filterDiv').innerHeight($('.filterDiv').innerWidth()/1.5);
+    $(window).on('resize',function(){
+        $('.filterDiv').innerHeight($('.filterDiv').innerWidth()/1.5);
+    });
 /*=============================================end============================ */
 
 
@@ -39,6 +42,9 @@ $('header .fa-times').on('click',function(){
 /*==============================================slick slider =============================================*/
 $('#intro-slider > div').slick({
     fade:true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 250,
 });
 
 $('#partners-grid').slick({
@@ -96,5 +102,22 @@ $(function(){
             $('header').removeClass('active');
         }
     });
+});
+/*==========================================================end ========================*/
+
+
+/*=============================viewing the image===================================== */
+
+$('.filterDiv .overlay').on('click',function(){
+    let selected_background = $(this).next().css('background-image');
+    selected_background = selected_background.replace('url(','').replace(')','').replace(/\"/gi, "");
+    $('#image-viewed').attr('src',selected_background);
+    $('body').addClass('image-viewing-status');
+    $('#image-viewer').fadeIn();
+});
+
+$('#image-viewer .close-icon').on('click',function(){
+    $('body').removeClass('image-viewing-status');
+    $('#image-viewer').fadeOut();
 });
 /*==========================================================end ========================*/
