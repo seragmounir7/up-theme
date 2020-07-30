@@ -2,7 +2,24 @@
 /* Template Name: Contact Template */
 get_header();
 ?>
-
+<style>
+	br {
+		display:none
+	}
+	.btn {
+		color: #FFFFFF!important;
+		padding: 16px 48px!important;
+		font-weight: 900;
+		border: 0;
+		border-radius: 100px;
+		font-size: 14px!important;
+		text-decoration: none;
+		text-transform: capitalize;
+		background-color: #ff0022!important;
+		cursor: pointer;
+		width: auto!important;
+	}
+</style>
 <section id="banner" class="display-flex justify-content-center align-items-center" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/contact_us.jpg)">
     <div>
         <h2 class="text-center">get in touch</h2>
@@ -15,14 +32,7 @@ get_header();
             <iframe src="https://maps.google.com/maps?q=30.0690395,31.4882479&amp;hl=es;z=14&amp;output=embed"></iframe>
             <div>
                 <h1>Send Us A Message</h1>
-                    <form action="">
-                    <input type="text" placeholder="Name"/>
-                    <input type="text" placeholder="Email"/>
-                    <input type="text" placeholder="Phone"/>
-                    <input type="text" placeholder="Subject"/>
-                    <textarea name="" id="" cols="30" rows="5" placeholder="Message"></textarea>
-                    <button class="btn">Send Message</button>
-                </form>
+                <?php echo do_shortcode( '[contact-form-7 id="30" title="Contact form 1"]' ); ?>
             </div>
             <div>
                 <h1>Contact</h1>
