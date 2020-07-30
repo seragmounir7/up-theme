@@ -136,7 +136,7 @@ get_header();
 </section>
 <section id="what-to-do" class="titled">
     <div class="container">
-        <h1 class="text-center">what to do</h1>
+        <h1 class="text-center">what we do</h1>
         <div id="what-to-do-grid">
             <div>
                 <div class="display-flex">

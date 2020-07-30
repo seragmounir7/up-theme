@@ -164,6 +164,9 @@ header {
     }
 
     @media (max-width:992px){
+        & img {
+            height: 3rem;
+        }
         #responsive-navbar {
             position: fixed;
             right: -320px;
@@ -202,6 +205,8 @@ header {
         .fa-bars {
             color:#fff;
             cursor: pointer;
+            font-size: 1.7rem;
+            margin-right: 1rem;
         }
 
         ul {
@@ -243,6 +248,7 @@ header {
             display: none;
         }
     }
+
 }
 
 #banner {
@@ -257,17 +263,17 @@ header {
     }
 
     h1 {
-        font-size: 5rem;
+        font-size: 4rem;
         margin-top: 10px;
         text-transform: capitalize;
     }
 
     h2 {
-        font-size: 1.5rem;
-        letter-spacing: 1rem;
+        font-size: 1rem;
+        letter-spacing: 0.4rem;
         text-transform: uppercase;
         line-height: 2.2rem;
-        margin:0 5px
+        margin: 0 5px;
     }
 }
 
@@ -722,12 +728,13 @@ $blue-light:#D8F5FF;
         width:33.33%;
         display:block;
         margin-bottom:16px;
-        transition:  .5s ease-in-out 0s;
+        @include prefixes(transition,.75s ease-in-out 0s );
         background-size: cover;
         position: relative;
         @media(max-width:768px){
             & {
                 width:50%;
+                @include prefixes(transition, none );
             }
         }
         @media(max-width:250px){
@@ -756,9 +763,15 @@ $blue-light:#D8F5FF;
             text-transform: capitalize;
             span {
                 font-weight: 100;
-                font-size: 27px;
+                font-size: 1.5rem;
                 line-height: 3rem;
                 text-align: center;
+                @media(max-width:556px){
+                    font-size:1.2rem
+                }
+                @media(max-width:350px){
+                    font-size:1rem
+                }
             }
             &:focus , &:hover {
                 opacity: 1;
@@ -903,12 +916,17 @@ footer {
     }
 
     #banner {
-        height:100vh;
+        height:50vh;
+        background-position: 50%;
     }
 
     #image-viewer #image-container-wrapper .image-container #image-viewed {
         height: auto;
         width: 100%;
+    }
+
+    .grecaptcha-badge {
+        display:none!important
     }
 }
 
@@ -966,5 +984,11 @@ footer {
     #image-viewer #image-container-wrapper .image-container #image-viewed {
         height: 100%;
         width: auto;
+    }
+}
+
+@media (max-width: 466px) {	
+    .slick-slide img {	
+      width: 90% !important;	
     }
 }

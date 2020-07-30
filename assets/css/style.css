@@ -169,6 +169,9 @@ header .fa-times {
   display: none;
 }
 @media (max-width: 992px) {
+  header img {
+    height: 3rem;
+  }
   header #responsive-navbar {
     position: fixed;
     right: -320px;
@@ -219,6 +222,8 @@ header .fa-times {
   header .fa-bars {
     color: #fff;
     cursor: pointer;
+    font-size: 1.7rem;
+    margin-right: 1rem;
   }
   header ul {
     display: block;
@@ -266,13 +271,13 @@ header .fa-times {
   font-weight: 900;
 }
 #banner h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   margin-top: 10px;
   text-transform: capitalize;
 }
 #banner h2 {
-  font-size: 1.5rem;
-  letter-spacing: 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.4rem;
   text-transform: uppercase;
   line-height: 2.2rem;
   margin: 0 5px;
@@ -912,13 +917,22 @@ $blue-light:#D8F5FF;
   width: 33.33%;
   display: block;
   margin-bottom: 16px;
-  transition: 0.5s ease-in-out 0s;
+  -webkit-transition: 0.75s ease-in-out 0s;
+  -moz-transition: 0.75s ease-in-out 0s;
+  -ms-transition: 0.75s ease-in-out 0s;
+  -o-transition: 0.75s ease-in-out 0s;
+  transition: 0.75s ease-in-out 0s;
   background-size: cover;
   position: relative;
 }
 @media (max-width: 768px) {
   #portfolio .filterDivs .filterDiv {
     width: 50%;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
   }
 }
 @media (max-width: 250px) {
@@ -964,9 +978,19 @@ $blue-light:#D8F5FF;
 }
 #portfolio .filterDivs .filterDiv .overlay span {
   font-weight: 100;
-  font-size: 27px;
+  font-size: 1.5rem;
   line-height: 3rem;
   text-align: center;
+}
+@media (max-width: 556px) {
+  #portfolio .filterDivs .filterDiv .overlay span {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 350px) {
+  #portfolio .filterDivs .filterDiv .overlay span {
+    font-size: 1rem;
+  }
 }
 #portfolio .filterDivs .filterDiv .overlay:focus, #portfolio .filterDivs .filterDiv .overlay:hover {
   opacity: 1;
@@ -1121,12 +1145,17 @@ footer img {
   }
 
   #banner {
-    height: 100vh;
+    height: 50vh;
+    background-position: 50%;
   }
 
   #image-viewer #image-container-wrapper .image-container #image-viewed {
     height: auto;
     width: 100%;
+  }
+
+  .grecaptcha-badge {
+    display: none !important;
   }
 }
 @media (min-width: 992px) {
@@ -1185,6 +1214,11 @@ footer img {
   #image-viewer #image-container-wrapper .image-container #image-viewed {
     height: 100%;
     width: auto;
+  }
+}
+@media (max-width: 466px) {
+  .slick-slide img {
+    width: 90% !important;
   }
 }
 

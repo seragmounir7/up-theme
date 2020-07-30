@@ -21,9 +21,11 @@ function filterSelection(f){
 }
 
     $('.filterDiv').innerHeight($('.filterDiv').innerWidth()/1.5);
+    
     $(window).on('resize',function(){
         $('.filterDiv').innerHeight($('.filterDiv').innerWidth()/1.5);
     });
+    
 /*=============================================end============================ */
 
 
