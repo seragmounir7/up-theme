@@ -19,12 +19,6 @@ function filterSelection(f){
         }
     }
 }
-
-    $('.filterDiv').innerHeight($('.filterDiv').innerWidth()/1.5);
-    
-    $(window).on('resize',function(){
-        $('.filterDiv').innerHeight($('.filterDiv').innerWidth()/1.5);
-    });
     
 /*=============================================end============================ */
 
@@ -117,10 +111,21 @@ $('.filterDiv .overlay').on('click',function(){
     $('#image-viewed').attr('src',selected_background);
     $('body').addClass('image-viewing-status');
     $('#image-viewer').fadeIn();
+    $(this).parent('.filterDiv').addClass('chosen');
 });
 
 $('#image-viewer .close-icon').on('click',function(){
     $('body').removeClass('image-viewing-status');
     $('#image-viewer').fadeOut();
+    $('.filterDiv').removeClass('chosen');
 });
+
+$('#image-container-wrapper').on('click', function(e) {
+    if (e.target !== this)
+      return;
+    
+      $('body').removeClass('image-viewing-status');
+      $('#image-viewer').fadeOut();
+      $('.filterDiv').removeClass('chosen');
+  });
 /*==========================================================end ========================*/

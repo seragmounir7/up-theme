@@ -915,24 +915,51 @@ $blue-light:#D8F5FF;
 }
 #portfolio .filterDivs .filterDiv {
   width: 33.33%;
+  height: 251.61px;
   display: block;
   margin-bottom: 16px;
-  -webkit-transition: 0.75s ease-in-out 0s;
-  -moz-transition: 0.75s ease-in-out 0s;
-  -ms-transition: 0.75s ease-in-out 0s;
-  -o-transition: 0.75s ease-in-out 0s;
-  transition: 0.75s ease-in-out 0s;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
   background-size: cover;
   position: relative;
+}
+@media (max-width: 992px) {
+  #portfolio .filterDivs .filterDiv {
+    height: 196.31px;
+  }
 }
 @media (max-width: 768px) {
   #portfolio .filterDivs .filterDiv {
     width: 50%;
+    height: 236.86px;
     -webkit-transition: none;
     -moz-transition: none;
     -ms-transition: none;
     -o-transition: none;
     transition: none;
+  }
+}
+@media (max-width: 700px) {
+  #portfolio .filterDivs .filterDiv {
+    height: 218.5px;
+  }
+}
+@media (max-width: 600px) {
+  #portfolio .filterDivs .filterDiv {
+    height: 175.75px;
+  }
+}
+@media (max-width: 500px) {
+  #portfolio .filterDivs .filterDiv {
+    height: 145.66px;
+  }
+}
+@media (max-width: 400px) {
+  #portfolio .filterDivs .filterDiv {
+    height: 108.92px;
   }
 }
 @media (max-width: 250px) {
@@ -962,11 +989,11 @@ $blue-light:#D8F5FF;
   -o-align-items: center;
   align-items: center;
   background-color: #000;
-  -webkit-transition-duration: 1000ms;
-  -moz-transition-duration: 1000ms;
-  -ms-transition-duration: 1000ms;
-  -o-transition-duration: 1000ms;
-  transition-duration: 1000ms;
+  -webkit-transition-duration: 750ms;
+  -moz-transition-duration: 750ms;
+  -ms-transition-duration: 750ms;
+  -o-transition-duration: 750ms;
+  transition-duration: 750ms;
   position: absolute;
   top: 0;
   left: 0;
@@ -985,6 +1012,7 @@ $blue-light:#D8F5FF;
 @media (max-width: 556px) {
   #portfolio .filterDivs .filterDiv .overlay span {
     font-size: 1.2rem;
+    line-height: 1.5rem;
   }
 }
 @media (max-width: 350px) {

@@ -18,7 +18,12 @@ get_header();
 		background-color: #ff0022!important;
 		cursor: pointer;
 		width: auto!important;
-	}
+    }
+    
+    #banner {
+        height: 50vh;
+        background-position: 0;
+    }
 </style>
 <section id="banner" class="display-flex justify-content-center align-items-center" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/contact_us.jpg)">
     <div>

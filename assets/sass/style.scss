@@ -726,15 +726,43 @@ $blue-light:#D8F5FF;
     @include prefixes(flex-wrap,wrap );
     .filterDiv {
         width:33.33%;
+        height:251.61px;
         display:block;
         margin-bottom:16px;
-        @include prefixes(transition,.75s ease-in-out 0s );
+        @include prefixes(transition,none);
         background-size: cover;
         position: relative;
+        @media(max-width:992px){
+            & {
+                height:196.31px ;
+            }
+
+        }
         @media(max-width:768px){
             & {
                 width:50%;
+                height:236.86px;
                 @include prefixes(transition, none );
+            }
+        }
+        @media(max-width:700px){
+            & {
+                height:218.5px;
+            }
+        }
+        @media(max-width:600px){
+            & {
+                height:175.75px
+            }
+        }
+        @media(max-width:500px){
+            & {
+                height:145.66px
+            }
+        }
+        @media(max-width:400px){
+            & {
+                height:108.92px
             }
         }
         @media(max-width:250px){
@@ -752,7 +780,7 @@ $blue-light:#D8F5FF;
             @include prefixes(justify-content,center );
             @include prefixes(align-items,center );
             background-color: #000;
-            @include prefixes(transition-duration, 1000ms);
+            @include prefixes(transition-duration, 750ms);
             position: absolute;
             top:0;
             left: 0;
@@ -767,7 +795,8 @@ $blue-light:#D8F5FF;
                 line-height: 3rem;
                 text-align: center;
                 @media(max-width:556px){
-                    font-size:1.2rem
+                    font-size:1.2rem;
+                    line-height: 1.5rem;
                 }
                 @media(max-width:350px){
                     font-size:1rem
