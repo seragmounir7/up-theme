@@ -918,11 +918,11 @@ $blue-light:#D8F5FF;
   height: 251.61px;
   display: block;
   margin-bottom: 16px;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -ms-transition: none;
-  -o-transition: none;
-  transition: none;
+  -webkit-transition: 1000ms ease-in-out 0s;
+  -moz-transition: 1000ms ease-in-out 0s;
+  -ms-transition: 1000ms ease-in-out 0s;
+  -o-transition: 1000ms ease-in-out 0s;
+  transition: 1000ms ease-in-out 0s;
   background-size: cover;
   position: relative;
 }

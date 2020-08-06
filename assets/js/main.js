@@ -106,7 +106,7 @@ $(function(){
 /*=============================viewing the image===================================== */
 
 $('.filterDiv .overlay').on('click',function(){
-    let selected_background = $(this).next().css('background-image');
+    let selected_background = $(this).next().data('original');
     selected_background = selected_background.replace('url(','').replace(')','').replace(/\"/gi, "");
     $('#image-viewed').attr('src',selected_background);
     $('body').addClass('image-viewing-status');

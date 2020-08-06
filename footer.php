@@ -15,7 +15,7 @@
     <script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.js"></script>
         <script src="<?php bloginfo('template_directory'); ?>/assets/js/slick.min.js"></script>
         <script src="https://kit.fontawesome.com/087e37f7bd.js" crossorigin="anonymous"></script>
-        <script src="<?php bloginfo('template_directory'); ?>/assets/js/main.js?ver=2.3211223"></script>
+        <script src="<?php bloginfo('template_directory'); ?>/assets/js/main.js?ver=2.32112223"></script>
     </body>
     <style>
         /* over all style */
