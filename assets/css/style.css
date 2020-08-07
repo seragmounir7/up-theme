@@ -935,11 +935,6 @@ $blue-light:#D8F5FF;
   #portfolio .filterDivs .filterDiv {
     width: 50%;
     height: 236.86px;
-    -webkit-transition: none;
-    -moz-transition: none;
-    -ms-transition: none;
-    -o-transition: none;
-    transition: none;
   }
 }
 @media (max-width: 700px) {

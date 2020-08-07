@@ -742,7 +742,7 @@ $blue-light:#D8F5FF;
             & {
                 width:50%;
                 height:236.86px;
-                @include prefixes(transition, none );
+                //@include prefixes(transition, none );
             }
         }
         @media(max-width:700px){
