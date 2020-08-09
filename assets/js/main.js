@@ -1,30 +1,36 @@
 
 /*==========================filteration of portfolio============================ */
-filterSelection('all');
-function filterSelection(f){
-    var newActiveFilter=$(".filters ."+f);
-    if(newActiveFilter.hasClass('active')){
-        //do nothing
-    } else {
-        //update filter
-        $('.filter.active').removeClass('active');
-        newActiveFilter.addClass('active');
-        
-        //apply filter
-        if(f=='all'){
-            $('.filterDivs').children().removeClass('hide');
-            } else {
-            $('.filterDivs').children("."+f).removeClass('hide');
-            $('.filterDivs').children().not("."+f).addClass('hide');
-        }
-    }
-}
+(function($) {
 
-    $('.filterDiv').innerHeight($('.filterDiv').innerWidth()/1.5);
-    
-    $(window).on('resize',function(){
-        $('.filterDiv').innerHeight($('.filterDiv').innerWidth()/1.5);
+    'use strict';
+
+    var $filters = $('.filter [data-filter]'),
+        $boxes = $('.boxes [data-category]');
+
+    $filters.on('click', function(e) {
+        e.preventDefault();
+        var $this = $(this);
+        
+        $filters.removeClass('active');
+        $this.addClass('active');
+
+        var $filterColor = $this.attr('data-filter');
+
+        if ($filterColor == 'All') {
+        $boxes.removeClass('is-animated')
+            .fadeOut().promise().done(function() {
+            $boxes.addClass('is-animated').fadeIn();
+            });
+        } else {
+        $boxes.removeClass('is-animated')
+            .fadeOut().promise().done(function() {
+            $boxes.filter('[data-category = "' + $filterColor + '"]')
+                .addClass('is-animated').fadeIn();
+            });
+        }
     });
+
+})(jQuery);
     
 /*=============================================end============================ */
 
@@ -72,13 +78,6 @@ $('#partners-grid').slick({
             slidesToShow: 2,
             slidesToScroll: 2
         }
-        },
-        {
-        breakpoint: 480,
-        settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-        }
         }
         // You can unslick at a given breakpoint now by adding:
         // settings: "unslick"
@@ -112,15 +111,26 @@ $(function(){
 /*=============================viewing the image===================================== */
 
 $('.filterDiv .overlay').on('click',function(){
-    let selected_background = $(this).next().css('background-image');
+    let selected_background = $(this).next().children('img').attr('src');
     selected_background = selected_background.replace('url(','').replace(')','').replace(/\"/gi, "");
     $('#image-viewed').attr('src',selected_background);
     $('body').addClass('image-viewing-status');
     $('#image-viewer').fadeIn();
+    $(this).parent('.filterDiv').addClass('chosen');
 });
 
 $('#image-viewer .close-icon').on('click',function(){
     $('body').removeClass('image-viewing-status');
     $('#image-viewer').fadeOut();
+    $('.filterDiv').removeClass('chosen');
 });
+
+$('#image-container-wrapper').on('click', function(e) {
+    if (e.target !== this)
+      return;
+    
+      $('body').removeClass('image-viewing-status');
+      $('#image-viewer').fadeOut();
+      $('.filterDiv').removeClass('chosen');
+  });
 /*==========================================================end ========================*/
