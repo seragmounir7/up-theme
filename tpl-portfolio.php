@@ -33,7 +33,7 @@ get_header();
                 <div class="filter Print" data-filter="Print" role="button">Print</div>
             </div>
             <div class="boxes">
-                <article data-category="Branding" class="filterDiv Branding">
+                <article data-category="Branding" class="filterDiv ready-state Branding">
                     <div class="overlay">
                         <span>Booth and charging stand</span>
                     </div>
@@ -41,7 +41,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Booth and charging stand.jpg">
                     </a>
                 </article>
-                <article data-category="Print" class="filterDiv Print">
+                <article data-category="Print" class="filterDiv ready-state Print">
                     <div class="overlay">
                         <span>Breakfast menu</span>
                     </div>
@@ -49,7 +49,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Breakfast menu.jpg">
                     </a>
                 </article>
-                <article data-category="Branding" class="filterDiv Branding">
+                <article data-category="Branding" class="filterDiv ready-state Branding">
                     <div class="overlay">
                         <span>Butcher Indoor</span>
                     </div>
@@ -57,7 +57,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Butcher Indoor.jpg">
                     </a>
                 </article>
-                <article data-category="Branding" class="filterDiv Branding">
+                <article data-category="Branding" class="filterDiv ready-state Branding">
                     <div class="overlay">
                         <span>Can Perfume</span>
                     </div>
@@ -65,7 +65,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Can Perfume.jpg">
                     </a>
                 </article>
-                <article data-category="Branding" class="filterDiv Branding">
+                <article data-category="Branding" class="filterDiv ready-state Branding">
                     <div class="overlay">
                         <span>Coffee station kiosk</span>
                     </div>
@@ -73,7 +73,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Coffee station kiosk.jpg">
                     </a>
                 </article>
-                <article data-category="Print" class="filterDiv Print">
+                <article data-category="Print" class="filterDiv ready-state Print">
                     <div class="overlay">
                         <span>dining menu</span>
                     </div>
@@ -81,7 +81,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/dining menu.jpg">
                     </a>
                 </article>
-                <article data-category="Print" class="filterDiv Print">
+                <article data-category="Print" class="filterDiv ready-state Print">
                     <div class="overlay">
                         <span>Equity company profile</span>
                     </div>
@@ -89,7 +89,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Equity company profile.jpg">
                     </a>
                 </article>
-                <article data-category="Digital" class="filterDiv Digital">
+                <article data-category="Digital" class="filterDiv ready-state Digital">
                     <div class="overlay">
                         <span>FB</span>
                     </div>
@@ -97,7 +97,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/FB.jpg">
                     </a>
                 </article>
-                <article data-category="Branding" class="filterDiv Branding">
+                <article data-category="Branding" class="filterDiv ready-state Branding">
                     <div class="overlay">
                         <span>fruit & vegetable packaging</span>
                     </div>
@@ -105,7 +105,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/fruit & vegetable packaging.jpg">
                     </a>
                 </article>
-                <article data-category="Print" class="filterDiv Print">
+                <article data-category="Print" class="filterDiv ready-state Print">
                     <div class="overlay">
                         <span>Greevill company profile</span>
                     </div>
@@ -113,7 +113,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Greevill company profile.jpg">
                     </a>
                 </article>
-                <article data-category="Digital" class="filterDiv Digital">
+                <article data-category="Digital" class="filterDiv ready-state Digital">
                     <div class="overlay">
                         <span>Greevill FB & Inst</span>
                     </div>
@@ -121,7 +121,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Greevill FB & Inst.jpg">
                     </a>
                 </article>
-                <article data-category="Branding" class="filterDiv Branding">
+                <article data-category="Branding" class="filterDiv ready-state Branding">
                     <div class="overlay">
                         <span>Greevill stationery</span>
                     </div>
@@ -129,7 +129,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Greevill stationery.jpg">
                     </a>
                 </article>
-                <article data-category="Digital" class="filterDiv Digital">
+                <article data-category="Digital" class="filterDiv ready-state Digital">
                     <div class="overlay">
                         <span>Greevill Website</span>
                     </div>
@@ -137,7 +137,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Greevill Website.jpg">
                     </a>
                 </article>
-                <article data-category="Digital" class="filterDiv Digital">
+                <article data-category="Digital" class="filterDiv ready-state Digital">
                     <div class="overlay">
                         <span>Initiative art 1</span>
                     </div>
@@ -145,7 +145,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Initiative art 1.jpg">
                     </a>
                 </article>
-                <article data-category="Digital" class="filterDiv Digital">
+                <article data-category="Digital" class="filterDiv ready-state Digital">
                     <div class="overlay">
                         <span>Initiative art 2</span>
                     </div>
@@ -153,7 +153,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Initiative art 2.jpg">
                     </a>
                 </article>
-                <article data-category="Digital" class="filterDiv Digital">
+                <article data-category="Digital" class="filterDiv ready-state Digital">
                     <div class="overlay">
                         <span>Initiative art 3</span>
                     </div>
@@ -161,7 +161,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Initiative art 3.jpg">
                     </a>
                 </article>
-                <article data-category="Digital" class="filterDiv Digital">
+                <article data-category="Digital" class="filterDiv ready-state Digital">
                     <div class="overlay">
                         <span>Initiative art 4</span>
                     </div>
@@ -169,7 +169,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Initiative art 4.jpg">
                     </a>
                 </article>
-                <article data-category="Branding" class="filterDiv Branding">
+                <article data-category="Branding" class="filterDiv ready-state Branding">
                     <div class="overlay">
                         <span>KP booth</span>
                     </div>
@@ -177,7 +177,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/KP booth.jpg">
                     </a>
                 </article>
-                <article data-category="Digital" class="filterDiv Digital">
+                <article data-category="Digital" class="filterDiv ready-state Digital">
                     <div class="overlay">
                         <span>La Di Da FB & Inst</span>
                     </div>
@@ -185,7 +185,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/La Di Da FB & Inst.jpg">
                     </a>
                 </article>
-                <article data-category="Branding" class="filterDiv Branding">
+                <article data-category="Branding" class="filterDiv ready-state Branding">
                     <div class="overlay">
                         <span>lamp packaging</span>
                     </div>
@@ -193,7 +193,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/lamp packaging.jpg">
                     </a>
                 </article>
-                <article data-category="Print" class="filterDiv Print">
+                <article data-category="Print" class="filterDiv ready-state Print">
                     <div class="overlay">
                         <span>Lebanon Tawlet Beirut</span>
                     </div>
@@ -201,7 +201,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Lebanon Tawlet Beirut menu copy.jpg">
                     </a>
                 </article>
-                <article data-category="Digital" class="filterDiv Digital">
+                <article data-category="Digital" class="filterDiv ready-state Digital">
                     <div class="overlay">
                         <span>liquidation Website</span>
                     </div>
@@ -209,7 +209,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/liquidation Website.jpg">
                     </a>
                 </article>
-                <article data-category="Branding" class="filterDiv Branding">
+                <article data-category="Branding" class="filterDiv ready-state Branding">
                     <div class="overlay">
                         <span>logos</span>
                     </div>
@@ -217,7 +217,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/logos.jpg">
                     </a>
                 </article>
-                <article data-category="Branding" class="filterDiv Branding">
+                <article data-category="Branding" class="filterDiv ready-state Branding">
                     <div class="overlay">
                         <span>Outdoor bus</span>
                     </div>
@@ -225,7 +225,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Outdoor bus.jpg">
                     </a>
                 </article>
-                <article data-category="Branding" class="filterDiv Branding">
+                <article data-category="Branding" class="filterDiv ready-state Branding">
                     <div class="overlay">
                         <span>Perfume Booth</span>
                     </div>
@@ -233,7 +233,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Perfume Booth.jpg">
                     </a>
                 </article>
-                <article data-category="Branding" class="filterDiv Branding">
+                <article data-category="Branding" class="filterDiv ready-state Branding">
                     <div class="overlay">
                         <span>perfume packaging_counter display stand</span>
                     </div>
@@ -241,7 +241,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/perfume packaging_counter display stand.jpg">
                     </a>
                 </article>
-                <article data-category="Print" class="filterDiv Print">
+                <article data-category="Print" class="filterDiv ready-state Print">
                     <div class="overlay">
                         <span>posm</span>
                     </div>
@@ -249,7 +249,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/posm.jpg">
                     </a>
                 </article>
-                <article data-category="Print" class="filterDiv Print">
+                <article data-category="Print" class="filterDiv ready-state Print">
                     <div class="overlay">
                         <span>Poster Branches</span>
                     </div>
@@ -257,7 +257,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Poster Branches.jpg">
                     </a>
                 </article>
-                <article data-category="Print" class="filterDiv Print">
+                <article data-category="Print" class="filterDiv ready-state Print">
                     <div class="overlay">
                         <span>Ramadan Reminder</span>
                     </div>
@@ -265,7 +265,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Ramadan Reminder.jpg">
                     </a>
                 </article>
-                <article data-category="Branding" class="filterDiv Branding">
+                <article data-category="Branding" class="filterDiv ready-state Branding">
                     <div class="overlay">
                         <span>Rashedy_POS</span>
                     </div>
@@ -273,7 +273,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Rashedy_POS.jpg">
                     </a>
                 </article>
-                <article data-category="Digital" class="filterDiv Digital">
+                <article data-category="Digital" class="filterDiv ready-state Digital">
                     <div class="overlay">
                         <span>SAPPAC Website</span>
                     </div>
@@ -281,7 +281,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/SAPPAC Website.jpg">
                     </a>
                 </article>
-                <article data-category="Branding" class="filterDiv Branding">
+                <article data-category="Branding" class="filterDiv ready-state Branding">
                     <div class="overlay">
                         <span>Sign</span>
                     </div>
@@ -289,7 +289,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Sign.jpg">
                     </a>
                 </article>
-                <article data-category="Branding" class="filterDiv Branding">
+                <article data-category="Branding" class="filterDiv ready-state Branding">
                     <div class="overlay">
                         <span>stationery and uniform</span>
                     </div>
@@ -297,7 +297,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/stationery and uniform.jpg">
                     </a>
                 </article>
-                <article data-category="Print" class="filterDiv Print">
+                <article data-category="Print" class="filterDiv ready-state Print">
                     <div class="overlay">
                         <span>Venya Brochure</span>
                     </div>
@@ -305,7 +305,7 @@ get_header();
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Venya Brochure.jpg">
                     </a>
                 </article>
-                <article data-category="Branding" class="filterDiv Branding">
+                <article data-category="Branding" class="filterDiv ready-state Branding">
                     <div class="overlay">
                         <span>ZENA tissues box</span>
                     </div>
@@ -319,9 +319,16 @@ get_header();
 </div>
 <section id="image-viewer">
     <div id="image-container-wrapper">
+        <div class="chevron-wrapper chevron-left-wrapper">
+            <img class="chevron-left" src="<?php bloginfo('template_directory'); ?>/assets/img/chevron-left.png">
+        </div>
         <div class="image-container">
             <img class="close-icon" src="<?php bloginfo('template_directory'); ?>/assets/img/close-icon.png" alt="colse icon">
             <img id="image-viewed" src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/ZENA tissues box.jpg" alt="image that you viewing">
+            <span class="title">Hello this is the title</span>
+        </div>
+        <div class="chevron-wrapper chevron-right-wrapper">
+            <img class="chevron-right" src="<?php bloginfo('template_directory'); ?>/assets/img/chevron-right.png">
         </div>
     </div>
 </section>

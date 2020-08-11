@@ -814,6 +814,30 @@ header .fa-times {
   align-items: center;
   height: 100vh;
 }
+#image-viewer #image-container-wrapper .chevron-wrapper {
+  z-index: 9;
+}
+#image-viewer #image-container-wrapper .chevron-wrapper img {
+  width: 65px;
+  height: 84px;
+  padding: 19px 12px;
+  background-color: #fff;
+  cursor: pointer;
+}
+#image-viewer #image-container-wrapper .chevron-wrapper.chevron-left-wrapper {
+  position: absolute;
+  left: 20px;
+}
+#image-viewer #image-container-wrapper .chevron-wrapper.chevron-left-wrapper img {
+  padding-right: 22px;
+}
+#image-viewer #image-container-wrapper .chevron-wrapper.chevron-right-wrapper {
+  position: absolute;
+  right: 20px;
+}
+#image-viewer #image-container-wrapper .chevron-wrapper.chevron-right-wrapper img {
+  padding-left: 22px;
+}
 #image-viewer #image-container-wrapper .image-container {
   position: relative;
   -webkit-display: flex;
@@ -831,6 +855,17 @@ header .fa-times {
   -ms-align-items: center;
   -o-align-items: center;
   align-items: center;
+}
+#image-viewer #image-container-wrapper .image-container .title {
+  position: absolute;
+  bottom: 0;
+  z-index: 9;
+  background-color: #00000099;
+  left: 0;
+  padding: 10px;
+  color: #fff;
+  font-size: 1.2rem;
+  text-transform: capitalize;
 }
 #image-viewer #image-container-wrapper .image-container #image-viewed {
   height: 90vh;
@@ -885,6 +920,7 @@ $blue-light:#D8F5FF;
   -ms-grid-gap: 8px;
   -o-grid-gap: 8px;
   grid-gap: 8px;
+  margin-bottom: 10px;
 }
 @media (max-width: 768px) {
   #portfolio .boxes {

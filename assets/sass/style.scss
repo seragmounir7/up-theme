@@ -647,12 +647,52 @@ header {
         @include prefixes(justify-content,center );
         @include prefixes(align-items,center );
         height: 100vh;
+        .chevron-wrapper {
+            z-index: 9;
+            
+            img {
+                width: 65px;
+                height: 84px;
+                padding: 19px 12px;
+                background-color: #fff;
+                cursor: pointer;
+            }
+
+            &.chevron-left-wrapper {
+                position: absolute;
+                left: 20px;
+
+                img {
+                    padding-right: 22px;
+                }
+            }
+
+            &.chevron-right-wrapper {
+                position: absolute;
+                right: 20px;
+
+                img {
+                    padding-left: 22px;
+                }
+            }
+        }
     
         .image-container {
             position: relative;
             @include prefixes(display,flex );
             @include prefixes(justify-content,center );
             @include prefixes(align-items,center );
+            .title {
+                position: absolute;
+                bottom: 0;
+                z-index: 9;
+                background-color: #00000099;
+                left: 0;
+                padding: 10px;
+                color: #fff;
+                font-size: 1.2rem;
+                text-transform: capitalize;
+            }
             #image-viewed {
                 height: 90vh;
                 width: auto;
@@ -703,6 +743,8 @@ $blue-light:#D8F5FF;
         @include prefixes(grid-template-columns,repeat(3,1fr) );
         
         @include prefixes(grid-gap, 8px );
+        margin-bottom: 10px;
+
         @media(max-width:768px){
             & {
                 @include prefixes(grid-template-columns,repeat(2,1fr) );

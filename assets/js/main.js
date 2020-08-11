@@ -15,17 +15,17 @@
         $this.addClass('active');
 
         var $filterColor = $this.attr('data-filter');
-
+        $boxes.removeClass('ready-state');
         if ($filterColor == 'All') {
-        $boxes.removeClass('is-animated')
+            $boxes.removeClass('is-animated')
             .fadeOut().promise().done(function() {
-            $boxes.addClass('is-animated').fadeIn();
+                $boxes.addClass('is-animated').fadeIn().addClass('ready-state');
             });
         } else {
-        $boxes.removeClass('is-animated')
+            $boxes.removeClass('is-animated')
             .fadeOut().promise().done(function() {
             $boxes.filter('[data-category = "' + $filterColor + '"]')
-                .addClass('is-animated').fadeIn();
+                .addClass('is-animated').fadeIn().addClass('ready-state');
             });
         }
     });
@@ -111,12 +111,9 @@ $(function(){
 /*=============================viewing the image===================================== */
 
 $('.filterDiv .overlay').on('click',function(){
-    let selected_background = $(this).next().children('img').attr('src');
-    selected_background = selected_background.replace('url(','').replace(')','').replace(/\"/gi, "");
-    $('#image-viewed').attr('src',selected_background);
-    $('body').addClass('image-viewing-status');
-    $('#image-viewer').fadeIn();
-    $(this).parent('.filterDiv').addClass('chosen');
+    let selected_project = $(this).parent('.filterDiv');
+    let selected_background = selected_project.find('img').attr('src');
+    select_image(selected_background , selected_project);
 });
 
 $('#image-viewer .close-icon').on('click',function(){
@@ -132,5 +129,32 @@ $('#image-container-wrapper').on('click', function(e) {
       $('body').removeClass('image-viewing-status');
       $('#image-viewer').fadeOut();
       $('.filterDiv').removeClass('chosen');
-  });
+});
 /*==========================================================end ========================*/
+
+/*=============================viewing the image===================================== */
+$('.chevron-wrapper .chevron-right').on('click',function(){
+    let prev_project = $('.chosen');
+    let selected_project = $(".ready-state").eq( $(".ready-state").index( $(prev_project) ) + 1 )
+    let selected_background = selected_project.find('img').attr('src');
+    prev_project.removeClass('chosen');
+    select_image(selected_background , selected_project);
+});
+
+$('.chevron-wrapper .chevron-left').on('click',function(){
+    let prev_project = $('.chosen');
+    let selected_project = $(".ready-state").eq( $(".ready-state").index( $(prev_project) ) - 1 )
+    let selected_background = selected_project.find('img').attr('src');
+    prev_project.removeClass('chosen');
+    select_image(selected_background , selected_project);
+});
+/*==========================================================end ========================*/
+
+function select_image(selected_background , selected_project){
+    selected_background = selected_background.replace('url(','').replace(')','').replace(/\"/gi, "");
+    $('#image-viewer #image-container-wrapper .image-container .title').text(selected_project.find('span').text());
+    $('#image-viewed').attr('src',selected_background);
+    $('body').addClass('image-viewing-status');
+    $('#image-viewer').fadeIn();
+    selected_project.addClass('chosen');
+}

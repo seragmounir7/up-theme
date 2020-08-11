@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>up-advertise</title>
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/style.css?ver=3.45222244">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/style.css?ver=3.4522222244">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/slick.css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/slick-theme.css">
+    <link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/assets/img/favcon64.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
     <script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.js"></script>
     <?php wp_head(); ?>
