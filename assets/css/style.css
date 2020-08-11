@@ -846,12 +846,12 @@ header .fa-times {
     background-color: #fff;
     cursor: pointer;
   }
-  #image-viewer #image-container-wrapper .chevron-wrapper.chevron-left-wrapper {
+  #image-viewer #image-container-wrapper .chevron-wrapper.chevron-right-wrapper {
     position: absolute;
     left: 20px;
   }
-  #image-viewer #image-container-wrapper .chevron-wrapper.chevron-left-wrapper img {
-    padding-right: 11px;
+  #image-viewer #image-container-wrapper .chevron-wrapper.chevron-right-wrapper img {
+    padding-left: 11px;
   }
   #image-viewer #image-container-wrapper .chevron-wrapper.chevron-left-wrapper {
     position: absolute;

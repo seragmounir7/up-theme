@@ -686,12 +686,12 @@ header {
                     cursor: pointer;
                 }
     
-                &.chevron-left-wrapper {
+                &.chevron-right-wrapper {
                     position: absolute;
                     left: 20px;
     
                     img {
-                        padding-right: 11px;
+                        padding-left: 11px;
                     }
                 }
     
