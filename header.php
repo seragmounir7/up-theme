@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>up-advertise</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/style.css?ver=3.4522222244">
+=======
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/style.css?ver=3.4555442222">
+    <link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/assets/img/favcon64.png" sizes="64x64">
+>>>>>>> e3473f4ffd2c278c9d17d64fa039fe4c30507901
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/slick.css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/slick-theme.css">
     <link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/assets/img/favcon64.png">

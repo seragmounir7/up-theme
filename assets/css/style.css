@@ -944,7 +944,20 @@ $blue-light:#D8F5FF;
   width: 100%;
   position: relative;
 }
+<<<<<<< HEAD
 #portfolio .boxes > article > a {
+=======
+#portfolio .filterDivs .filterDiv {
+  width: 33.33%;
+  height: 251.61px;
+  display: block;
+  margin-bottom: 16px;
+  -webkit-transition: 1000ms ease-in-out 0s;
+  -moz-transition: 1000ms ease-in-out 0s;
+  -ms-transition: 1000ms ease-in-out 0s;
+  -o-transition: 1000ms ease-in-out 0s;
+  transition: 1000ms ease-in-out 0s;
+>>>>>>> e3473f4ffd2c278c9d17d64fa039fe4c30507901
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -959,9 +972,40 @@ $blue-light:#D8F5FF;
     height: 250px;
   }
 }
+@media (max-width: 992px) {
+  #portfolio .filterDivs .filterDiv {
+    height: 196.31px;
+  }
+}
 @media (max-width: 768px) {
+<<<<<<< HEAD
   #portfolio .boxes > article {
     height: 235px;
+=======
+  #portfolio .filterDivs .filterDiv {
+    width: 50%;
+    height: 236.86px;
+  }
+}
+@media (max-width: 700px) {
+  #portfolio .filterDivs .filterDiv {
+    height: 218.5px;
+  }
+}
+@media (max-width: 600px) {
+  #portfolio .filterDivs .filterDiv {
+    height: 175.75px;
+  }
+}
+@media (max-width: 500px) {
+  #portfolio .filterDivs .filterDiv {
+    height: 145.66px;
+  }
+}
+@media (max-width: 400px) {
+  #portfolio .filterDivs .filterDiv {
+    height: 108.92px;
+>>>>>>> e3473f4ffd2c278c9d17d64fa039fe4c30507901
   }
 }
 @media (max-width: 556px) {
@@ -996,11 +1040,11 @@ $blue-light:#D8F5FF;
   -o-align-items: center;
   align-items: center;
   background-color: #000;
-  -webkit-transition-duration: 1000ms;
-  -moz-transition-duration: 1000ms;
-  -ms-transition-duration: 1000ms;
-  -o-transition-duration: 1000ms;
-  transition-duration: 1000ms;
+  -webkit-transition-duration: 750ms;
+  -moz-transition-duration: 750ms;
+  -ms-transition-duration: 750ms;
+  -o-transition-duration: 750ms;
+  transition-duration: 750ms;
   position: absolute;
   top: 0;
   left: 0;
@@ -1019,7 +1063,11 @@ $blue-light:#D8F5FF;
 @media (max-width: 556px) {
   #portfolio .boxes > article .overlay span {
     font-size: 1.2rem;
+<<<<<<< HEAD
     line-height: 1.7rem;
+=======
+    line-height: 1.5rem;
+>>>>>>> e3473f4ffd2c278c9d17d64fa039fe4c30507901
   }
 }
 @media (max-width: 350px) {
