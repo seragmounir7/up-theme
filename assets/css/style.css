@@ -838,6 +838,29 @@ header .fa-times {
 #image-viewer #image-container-wrapper .chevron-wrapper.chevron-right-wrapper img {
   padding-left: 22px;
 }
+@media (max-width: 768px) {
+  #image-viewer #image-container-wrapper .chevron-wrapper img {
+    width: 34px;
+    height: 53px;
+    padding: 14px 8px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  #image-viewer #image-container-wrapper .chevron-wrapper.chevron-left-wrapper {
+    position: absolute;
+    left: 20px;
+  }
+  #image-viewer #image-container-wrapper .chevron-wrapper.chevron-left-wrapper img {
+    padding-right: 11px;
+  }
+  #image-viewer #image-container-wrapper .chevron-wrapper.chevron-left-wrapper {
+    position: absolute;
+    left: 20px;
+  }
+  #image-viewer #image-container-wrapper .chevron-wrapper.chevron-left-wrapper img {
+    padding-right: 11px;
+  }
+}
 #image-viewer #image-container-wrapper .image-container {
   position: relative;
   -webkit-display: flex;

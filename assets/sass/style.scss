@@ -675,6 +675,36 @@ header {
                     padding-left: 22px;
                 }
             }
+
+            @media(max-width:768px){
+            
+                img {
+                    width: 34px;
+                    height: 53px;
+                    padding: 14px 8px;
+                    background-color: #fff;
+                    cursor: pointer;
+                }
+    
+                &.chevron-left-wrapper {
+                    position: absolute;
+                    left: 20px;
+    
+                    img {
+                        padding-right: 11px;
+                    }
+                }
+    
+                &.chevron-left-wrapper {
+                    position: absolute;
+                    left: 20px;
+    
+                    img {
+                        padding-right: 11px;
+                    }
+                }
+
+            }
         }
     
         .image-container {
