@@ -728,7 +728,6 @@ $blue-light:#D8F5FF;
     .filter {
         margin: 30px 0 10px;
     }
-<<<<<<< HEAD
     
     .filter a {
         display: inline-block;
@@ -749,55 +748,6 @@ $blue-light:#D8F5FF;
         @media(max-width:768px){
             & {
                 @include prefixes(grid-template-columns,repeat(2,1fr) );
-=======
-  }
-  .artboard{
-    position:relative;
-    margin-bottom: 20px;
-  }
-  .filterDivs{
-    @include prefixes(display,flex );
-    @include prefixes(flex-wrap,wrap );
-    .filterDiv {
-        width:33.33%;
-        height:251.61px;
-        display:block;
-        margin-bottom:16px;
-        @include prefixes(transition,1000ms ease-in-out 0s );
-        background-size: cover;
-        position: relative;
-        @media(max-width:992px){
-            & {
-                height:196.31px ;
-            }
-
-        }
-        @media(max-width:768px){
-            & {
-                width:50%;
-                height:236.86px;
-                //@include prefixes(transition, none );
-            }
-        }
-        @media(max-width:700px){
-            & {
-                height:218.5px;
-            }
-        }
-        @media(max-width:600px){
-            & {
-                height:175.75px
-            }
-        }
-        @media(max-width:500px){
-            & {
-                height:145.66px
-            }
-        }
-        @media(max-width:400px){
-            & {
-                height:108.92px
->>>>>>> e3473f4ffd2c278c9d17d64fa039fe4c30507901
             }
         }
         @media(max-width:250px){
@@ -805,7 +755,6 @@ $blue-light:#D8F5FF;
                 @include prefixes(grid-template-columns,repeat(1,1fr) );
             }
         }
-<<<<<<< HEAD
 
         & > article {
             width:100%;
@@ -819,35 +768,6 @@ $blue-light:#D8F5FF;
 
                 & img {
                     width:100%
-=======
-        & > div {
-            background-size: cover;
-            height: 100%;
-            margin:8px;
-        }
-        .overlay {
-            @include prefixes(display,flex );
-            @include prefixes(justify-content,center );
-            @include prefixes(align-items,center );
-            background-color: #000;
-            @include prefixes(transition-duration, 750ms);
-            position: absolute;
-            top:0;
-            left: 0;
-            width: calc(100% - 16px);
-            height:100%;
-            opacity: 0;
-            cursor: pointer;
-            text-transform: capitalize;
-            span {
-                font-weight: 100;
-                font-size: 1.5rem;
-                line-height: 3rem;
-                text-align: center;
-                @media(max-width:556px){
-                    font-size:1.2rem;
-                    line-height: 1.5rem;
->>>>>>> e3473f4ffd2c278c9d17d64fa039fe4c30507901
                 }
             }
 

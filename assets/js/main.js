@@ -11,7 +11,6 @@
         e.preventDefault();
         var $this = $(this);
         
-<<<<<<< HEAD
         $filters.removeClass('active');
         $this.addClass('active');
 
@@ -32,17 +31,6 @@
     });
 
 })(jQuery);
-=======
-        //apply filter
-        if(f=='all'){
-            $('.filterDivs').children().removeClass('hide');
-            } else {
-            $('.filterDivs').children("."+f).removeClass('hide');
-            $('.filterDivs').children().not("."+f).addClass('hide');
-        }
-    }
-}
->>>>>>> e3473f4ffd2c278c9d17d64fa039fe4c30507901
     
 /*=============================================end============================ */
 
@@ -123,25 +111,15 @@ $(function(){
 /*=============================viewing the image===================================== */
 
 $('.filterDiv .overlay').on('click',function(){
-<<<<<<< HEAD
     let selected_project = $(this).parent('.filterDiv');
     let selected_background = selected_project.find('img').attr('src');
     select_image(selected_background , selected_project);
-=======
-    let selected_background = $(this).next().data('original');
-    selected_background = selected_background.replace('url(','').replace(')','').replace(/\"/gi, "");
-    $('#image-viewed').attr('src',selected_background);
-    $('body').addClass('image-viewing-status');
-    $('#image-viewer').fadeIn();
-    $(this).parent('.filterDiv').addClass('chosen');
->>>>>>> e3473f4ffd2c278c9d17d64fa039fe4c30507901
 });
 
 $('#image-viewer .close-icon').on('click',function(){
     $('body').removeClass('image-viewing-status');
     $('#image-viewer').fadeOut();
     $('.filterDiv').removeClass('chosen');
-<<<<<<< HEAD
 });
 
 $('#image-container-wrapper').on('click', function(e) {
@@ -169,18 +147,7 @@ $('.chevron-wrapper .chevron-left').on('click',function(){
     let selected_background = selected_project.find('img').attr('src');
     prev_project.removeClass('chosen');
     select_image(selected_background , selected_project);
-=======
->>>>>>> e3473f4ffd2c278c9d17d64fa039fe4c30507901
 });
-
-$('#image-container-wrapper').on('click', function(e) {
-    if (e.target !== this)
-      return;
-    
-      $('body').removeClass('image-viewing-status');
-      $('#image-viewer').fadeOut();
-      $('.filterDiv').removeClass('chosen');
-  });
 /*==========================================================end ========================*/
 
 function select_image(selected_background , selected_project){
