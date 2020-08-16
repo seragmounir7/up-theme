@@ -639,7 +639,7 @@ header {
     top: 0;
     left: 0;
     z-index: 9999;
-    background-color: #00000094;
+    background-color: #000000cc;
     display: none;
     width: 100%;
     #image-container-wrapper {
@@ -652,56 +652,38 @@ header {
             
             img {
                 width: 65px;
-                height: 84px;
-                padding: 19px 12px;
                 background-color: #fff;
                 cursor: pointer;
+                padding: 8px;
             }
 
             &.chevron-left-wrapper {
                 position: absolute;
                 left: 20px;
-
-                img {
-                    padding-right: 22px;
-                }
             }
 
             &.chevron-right-wrapper {
                 position: absolute;
                 right: 20px;
-
-                img {
-                    padding-left: 22px;
-                }
             }
 
             @media(max-width:768px){
             
                 img {
                     width: 34px;
-                    height: 53px;
-                    padding: 14px 8px;
+                    padding: 8px;
                     background-color: #fff;
                     cursor: pointer;
                 }
     
                 &.chevron-right-wrapper {
                     position: absolute;
-                    left: 20px;
-    
-                    img {
-                        padding-left: 11px;
-                    }
+                    right: 20px;
                 }
     
                 &.chevron-left-wrapper {
                     position: absolute;
                     left: 20px;
-    
-                    img {
-                        padding-right: 11px;
-                    }
                 }
 
             }
