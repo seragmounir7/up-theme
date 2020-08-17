@@ -27,292 +27,44 @@ get_header();
     <div class="container">
         <div class="artboard">
             <div class="cra filter">
-                <div class="filter All active" data-filter="All" role="button">All</div>
-                <div class="filter Branding" data-filter="Branding" role="button">Branding</div>
-                <div class="filter Digital" data-filter="Digital" role="button">Digital</div>
-                <div class="filter Print" data-filter="Print" role="button">Print</div>
+                    <?php $categories = get_terms(array('taxonomy' => 'categories','orderby' => 'DESC','hide_empty' => false,) ); ?>
+                    <div class="filter All active" data-filter="All" role="button">All</div>
+                    <?php foreach ($categories as $category) : ?>
+                        <div class="filter <?php echo $category->name; ?>" data-filter="<?php echo $category->name; ?>" role="button"><?php echo $category->name; ?></div>
+                    <?php endforeach; ?>
             </div>
             <div class="boxes">
-                <article data-category="Branding" class="filterDiv ready-state Branding">
-                    <div class="overlay">
-                        <span>Booth and charging stand</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Booth and charging stand.jpg">
-                    </a>
-                </article>
-                <article data-category="Print" class="filterDiv ready-state Print">
-                    <div class="overlay">
-                        <span>Breakfast menu</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Breakfast menu.jpg">
-                    </a>
-                </article>
-                <article data-category="Branding" class="filterDiv ready-state Branding">
-                    <div class="overlay">
-                        <span>Butcher Indoor</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Butcher Indoor.jpg">
-                    </a>
-                </article>
-                <article data-category="Branding" class="filterDiv ready-state Branding">
-                    <div class="overlay">
-                        <span>Can Perfume</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Can Perfume.jpg">
-                    </a>
-                </article>
-                <article data-category="Branding" class="filterDiv ready-state Branding">
-                    <div class="overlay">
-                        <span>Coffee station kiosk</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Coffee station kiosk.jpg">
-                    </a>
-                </article>
-                <article data-category="Print" class="filterDiv ready-state Print">
-                    <div class="overlay">
-                        <span>dining menu</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/dining menu.jpg">
-                    </a>
-                </article>
-                <article data-category="Print" class="filterDiv ready-state Print">
-                    <div class="overlay">
-                        <span>Equity company profile</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Equity company profile.jpg">
-                    </a>
-                </article>
-                <article data-category="Digital" class="filterDiv ready-state Digital">
-                    <div class="overlay">
-                        <span>FB</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/FB.jpg">
-                    </a>
-                </article>
-                <article data-category="Branding" class="filterDiv ready-state Branding">
-                    <div class="overlay">
-                        <span>fruit & vegetable packaging</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/fruit & vegetable packaging.jpg">
-                    </a>
-                </article>
-                <article data-category="Print" class="filterDiv ready-state Print">
-                    <div class="overlay">
-                        <span>Greevill company profile</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Greevill company profile.jpg">
-                    </a>
-                </article>
-                <article data-category="Digital" class="filterDiv ready-state Digital">
-                    <div class="overlay">
-                        <span>Greevill FB & Inst</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Greevill FB & Inst.jpg">
-                    </a>
-                </article>
-                <article data-category="Branding" class="filterDiv ready-state Branding">
-                    <div class="overlay">
-                        <span>Greevill stationery</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Greevill stationery.jpg">
-                    </a>
-                </article>
-                <article data-category="Digital" class="filterDiv ready-state Digital">
-                    <div class="overlay">
-                        <span>Greevill Website</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Greevill Website.jpg">
-                    </a>
-                </article>
-                <article data-category="Digital" class="filterDiv ready-state Digital">
-                    <div class="overlay">
-                        <span>Initiative art 1</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Initiative art 1.jpg">
-                    </a>
-                </article>
-                <article data-category="Digital" class="filterDiv ready-state Digital">
-                    <div class="overlay">
-                        <span>Initiative art 2</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Initiative art 2.jpg">
-                    </a>
-                </article>
-                <article data-category="Digital" class="filterDiv ready-state Digital">
-                    <div class="overlay">
-                        <span>Initiative art 3</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Initiative art 3.jpg">
-                    </a>
-                </article>
-                <article data-category="Digital" class="filterDiv ready-state Digital">
-                    <div class="overlay">
-                        <span>Initiative art 4</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Initiative art 4.jpg">
-                    </a>
-                </article>
-                <article data-category="Branding" class="filterDiv ready-state Branding">
-                    <div class="overlay">
-                        <span>KP booth</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/KP booth.jpg">
-                    </a>
-                </article>
-                <article data-category="Digital" class="filterDiv ready-state Digital">
-                    <div class="overlay">
-                        <span>La Di Da FB & Inst</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/La Di Da FB & Inst.jpg">
-                    </a>
-                </article>
-                <article data-category="Branding" class="filterDiv ready-state Branding">
-                    <div class="overlay">
-                        <span>lamp packaging</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/lamp packaging.jpg">
-                    </a>
-                </article>
-                <article data-category="Print" class="filterDiv ready-state Print">
-                    <div class="overlay">
-                        <span>Lebanon Tawlet Beirut</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Lebanon Tawlet Beirut menu copy.jpg">
-                    </a>
-                </article>
-                <article data-category="Digital" class="filterDiv ready-state Digital">
-                    <div class="overlay">
-                        <span>liquidation Website</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/liquidation Website.jpg">
-                    </a>
-                </article>
-                <article data-category="Branding" class="filterDiv ready-state Branding">
-                    <div class="overlay">
-                        <span>logos</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/logos.jpg">
-                    </a>
-                </article>
-                <article data-category="Branding" class="filterDiv ready-state Branding">
-                    <div class="overlay">
-                        <span>Outdoor bus</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Outdoor bus.jpg">
-                    </a>
-                </article>
-                <article data-category="Branding" class="filterDiv ready-state Branding">
-                    <div class="overlay">
-                        <span>Perfume Booth</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Perfume Booth.jpg">
-                    </a>
-                </article>
-                <article data-category="Branding" class="filterDiv ready-state Branding">
-                    <div class="overlay">
-                        <span>perfume packaging_counter display stand</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/perfume packaging_counter display stand.jpg">
-                    </a>
-                </article>
-                <article data-category="Print" class="filterDiv ready-state Print">
-                    <div class="overlay">
-                        <span>posm</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/posm.jpg">
-                    </a>
-                </article>
-                <article data-category="Print" class="filterDiv ready-state Print">
-                    <div class="overlay">
-                        <span>Poster Branches</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Poster Branches.jpg">
-                    </a>
-                </article>
-                <article data-category="Print" class="filterDiv ready-state Print">
-                    <div class="overlay">
-                        <span>Ramadan Reminder</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Ramadan Reminder.jpg">
-                    </a>
-                </article>
-                <article data-category="Branding" class="filterDiv ready-state Branding">
-                    <div class="overlay">
-                        <span>Rashedy_POS</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Rashedy_POS.jpg">
-                    </a>
-                </article>
-                <article data-category="Digital" class="filterDiv ready-state Digital">
-                    <div class="overlay">
-                        <span>SAPPAC Website</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/SAPPAC Website.jpg">
-                    </a>
-                </article>
-                <article data-category="Branding" class="filterDiv ready-state Branding">
-                    <div class="overlay">
-                        <span>Sign</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Sign.jpg">
-                    </a>
-                </article>
-                <article data-category="Branding" class="filterDiv ready-state Branding">
-                    <div class="overlay">
-                        <span>stationery and uniform</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/stationery and uniform.jpg">
-                    </a>
-                </article>
-                <article data-category="Print" class="filterDiv ready-state Print">
-                    <div class="overlay">
-                        <span>Venya Brochure</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/Venya Brochure.jpg">
-                    </a>
-                </article>
-                <article data-category="Branding" class="filterDiv ready-state Branding">
-                    <div class="overlay">
-                        <span>ZENA tissues box</span>
-                    </div>
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/ZENA tissues box.jpg">
-                    </a>
-                </article>
+                <?php
+                    $args = array(
+                        'post_type' => 'Work',
+                        'order' => 'rand',
+                        'orderby' => 'rand',
+                        'posts_per_page' => 999,
+                    );
+                    $query = new WP_Query( $args );
+                ?>
+                
+                <?php
+
+                    if ( $query->have_posts() ) { ?>
+                        <?php
+                        while ( $query->have_posts() ) {
+                            $query->the_post(); ?>
+                            <?php
+                                $category = get_field( 'cat_field' );
+                            ?>
+                            <article data-category="<?php echo $category ?>" class="filterDiv ready-state <?php echo $category ?>">
+                                <div class="overlay">
+                                    <span><?php echo the_title(); ?></span>
+                                </div>
+                                <a href="#">
+                                    <img src="<?php echo the_field('image'); ?>">
+                                </a>
+                            </article>
+                        <?php
+                        }
+                    }    
+                ?>
             </div>
         </div>
     </div>

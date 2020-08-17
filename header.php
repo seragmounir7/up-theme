@@ -13,6 +13,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
     <script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.js"></script>
     <?php wp_head(); ?>
+    <meta property="og:title" content="Up advertising agency">
+    <meta property="og:description" content="We are dedicated to provide a full advertising services that make creative ideas come to realty thought innovative digital marketing & branding">
+    <meta property="og:url" content="http://up-advertise.com/">
+    <meta property="og:site_name" content="Up advertising agency">
+    <meta property="og:image" content="<?php bloginfo('template_directory'); ?>/assets/img/up-sharer.jpg">
+    <meta property="og:image:secure_url" content="<?php bloginfo('template_directory'); ?>/assets/img/up-sharer.jpg">
 </head>
 <body>
     <header>
