@@ -75,7 +75,7 @@ get_header();
             <img class="chevron-left" src="<?php bloginfo('template_directory'); ?>/assets/img/chevron-left.png">
         </div>
         <div class="image-container">
-            <img class="close-icon" src="<?php bloginfo('template_directory'); ?>/assets/img/close-icon.png" alt="colse icon">
+            <img class="close-icon" src="<?php bloginfo('template_directory'); ?>/assets/img/white-close-icon.png" alt="colse icon">
             <img id="image-viewed" src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/ZENA tissues box.jpg" alt="image that you viewing">
             <span class="title">Hello this is the title</span>
         </div>

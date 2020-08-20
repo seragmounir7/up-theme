@@ -647,12 +647,13 @@ header {
         @include prefixes(justify-content,center );
         @include prefixes(align-items,center );
         height: 100vh;
+        margin-top:16px;
         .chevron-wrapper {
             z-index: 9;
             
             img {
                 width: 65px;
-                background-color: #fff;
+                //background-color: #fff;
                 cursor: pointer;
                 padding: 8px;
             }
@@ -679,13 +680,6 @@ header {
                 &.chevron-right-wrapper {
                     position: absolute;
                     right: 20px;
-<<<<<<< HEAD
-    
-                    img {
-                        padding-left: 11px;
-                    }
-=======
->>>>>>> f8041c482086d182bab7f098a6f15757c43e707a
                 }
     
                 &.chevron-left-wrapper {
@@ -705,12 +699,13 @@ header {
                 position: absolute;
                 bottom: 0;
                 z-index: 9;
-                background-color: #00000099;
+                background-color: #000;
                 left: 0;
                 padding: 10px;
                 color: #fff;
                 font-size: 1.2rem;
                 text-transform: capitalize;
+                width:100%
             }
             #image-viewed {
                 height: 90vh;
@@ -719,12 +714,12 @@ header {
             .close-icon {
                 width: 26px;
                 position: absolute;
-                top: -13px;
-                right: -13px;
-                background-color: #fff;
+                top: -26px;
+                right: -5px;
                 border-radius: 50%;
                 padding: 5px;
                 cursor: pointer;
+
             }
         }
     }    
@@ -738,6 +733,11 @@ $pink-light:#FFC8C3;
 $blue:#91E3FF;
 $blue-light:#D8F5FF;
 */
+
+@keyframes scale-up {
+    from {@include prefixes(transform,scale(0.1));}
+    to {@include prefixes(transform,scale(1));;}
+}
 
 #portfolio {
     .cra.filter{
@@ -778,6 +778,11 @@ $blue-light:#D8F5FF;
         & > article {
             width:100%;
             position: relative;
+            &.ready-state {
+                @include prefixes(animation-name,scale-up);
+                @include prefixes(animation-duration,750ms);
+            }
+
             & > a {
                 background-size: cover;
                 height: 100%;
@@ -835,6 +840,10 @@ $blue-light:#D8F5FF;
                     font-size: 1.5rem;
                     line-height: 3rem;
                     text-align: center;
+                    @include prefixes(transform,translateY(-20px) );
+                    @include prefixes(transition-duration,500ms);
+                    opacity:0;
+                    color: #fff;
                     @media(max-width:556px){
                         font-size:1.2rem;
                         line-height: 1.7rem;
@@ -845,29 +854,16 @@ $blue-light:#D8F5FF;
                 }
                 &:focus , &:hover {
                     opacity: 1;
-                    background-color: #0000005e;
+                    background-color: #000000b3;
                     color: #fff;
+
+                    span {
+                        @include prefixes(transform,translateY(0) );
+                        opacity:1;
+                    }
                 }
             }
 
-        }
-    }
-
-    
-    .is-animated {
-        animation: .6s zoom-in;
-        @include prefixes(animation,.6s zoom-in );
-        will-change:transform
-    }
-    
-    @keyframes zoom-in {
-        0% {
-            @include prefixes(transform,scale(.1) );
-            transition:ease-in-out
-        } 
-        100% {
-            @include prefixes(transform,none );
-            transition:ease-in-out
         }
     }
 

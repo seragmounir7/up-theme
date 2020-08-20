@@ -813,13 +813,13 @@ header .fa-times {
   -o-align-items: center;
   align-items: center;
   height: 100vh;
+  margin-top: 16px;
 }
 #image-viewer #image-container-wrapper .chevron-wrapper {
   z-index: 9;
 }
 #image-viewer #image-container-wrapper .chevron-wrapper img {
   width: 65px;
-  background-color: #fff;
   cursor: pointer;
   padding: 8px;
 }
@@ -841,12 +841,6 @@ header .fa-times {
   #image-viewer #image-container-wrapper .chevron-wrapper.chevron-right-wrapper {
     position: absolute;
     right: 20px;
-<<<<<<< HEAD
-  }
-  #image-viewer #image-container-wrapper .chevron-wrapper.chevron-right-wrapper img {
-    padding-left: 11px;
-=======
->>>>>>> f8041c482086d182bab7f098a6f15757c43e707a
   }
   #image-viewer #image-container-wrapper .chevron-wrapper.chevron-left-wrapper {
     position: absolute;
@@ -875,12 +869,13 @@ header .fa-times {
   position: absolute;
   bottom: 0;
   z-index: 9;
-  background-color: #00000099;
+  background-color: #000;
   left: 0;
   padding: 10px;
   color: #fff;
   font-size: 1.2rem;
   text-transform: capitalize;
+  width: 100%;
 }
 #image-viewer #image-container-wrapper .image-container #image-viewed {
   height: 90vh;
@@ -889,9 +884,8 @@ header .fa-times {
 #image-viewer #image-container-wrapper .image-container .close-icon {
   width: 26px;
   position: absolute;
-  top: -13px;
-  right: -13px;
-  background-color: #fff;
+  top: -26px;
+  right: -5px;
   border-radius: 50%;
   padding: 5px;
   cursor: pointer;
@@ -905,6 +899,22 @@ $pink-light:#FFC8C3;
 $blue:#91E3FF;
 $blue-light:#D8F5FF;
 */
+@keyframes scale-up {
+  from {
+    -webkit-transform: scale(0.1);
+    -moz-transform: scale(0.1);
+    -ms-transform: scale(0.1);
+    -o-transform: scale(0.1);
+    transform: scale(0.1);
+  }
+  to {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+}
 #portfolio .cra.filter {
   margin-bottom: 10px;
 }
@@ -958,6 +968,18 @@ $blue-light:#D8F5FF;
 #portfolio .boxes > article {
   width: 100%;
   position: relative;
+}
+#portfolio .boxes > article.ready-state {
+  -webkit-animation-name: scale-up;
+  -moz-animation-name: scale-up;
+  -ms-animation-name: scale-up;
+  -o-animation-name: scale-up;
+  animation-name: scale-up;
+  -webkit-animation-duration: 750ms;
+  -moz-animation-duration: 750ms;
+  -ms-animation-duration: 750ms;
+  -o-animation-duration: 750ms;
+  animation-duration: 750ms;
 }
 #portfolio .boxes > article > a {
   background-size: cover;
@@ -1030,6 +1052,18 @@ $blue-light:#D8F5FF;
   font-size: 1.5rem;
   line-height: 3rem;
   text-align: center;
+  -webkit-transform: translateY(-20px);
+  -moz-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  -o-transform: translateY(-20px);
+  transform: translateY(-20px);
+  -webkit-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  -ms-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms;
+  opacity: 0;
+  color: #fff;
 }
 @media (max-width: 556px) {
   #portfolio .boxes > article .overlay span {
@@ -1044,35 +1078,16 @@ $blue-light:#D8F5FF;
 }
 #portfolio .boxes > article .overlay:focus, #portfolio .boxes > article .overlay:hover {
   opacity: 1;
-  background-color: #0000005e;
+  background-color: #000000b3;
   color: #fff;
 }
-#portfolio .is-animated {
-  animation: 0.6s zoom-in;
-  -webkit-animation: 0.6s zoom-in;
-  -moz-animation: 0.6s zoom-in;
-  -ms-animation: 0.6s zoom-in;
-  -o-animation: 0.6s zoom-in;
-  animation: 0.6s zoom-in;
-  will-change: transform;
-}
-@keyframes zoom-in {
-  0% {
-    -webkit-transform: scale(0.1);
-    -moz-transform: scale(0.1);
-    -ms-transform: scale(0.1);
-    -o-transform: scale(0.1);
-    transform: scale(0.1);
-    transition: ease-in-out;
-  }
-  100% {
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    -o-transform: none;
-    transform: none;
-    transition: ease-in-out;
-  }
+#portfolio .boxes > article .overlay:focus span, #portfolio .boxes > article .overlay:hover span {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
 }
 #portfolio .filter {
   position: relative;

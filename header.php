@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>up-advertise</title>
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/style.css?ver=4.22224522222244">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/style.css?ver=4.22222452255222244">
     <link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/assets/img/favcon64.png" sizes="64x64">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/slick.css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/slick-theme.css">

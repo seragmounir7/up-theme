@@ -19,18 +19,22 @@
         if ($filterColor == 'All') {
             $boxes.removeClass('is-animated')
             .fadeOut().promise().done(function() {
-                $boxes.addClass('is-animated').fadeIn().addClass('ready-state');
+                $boxes.fadeIn().addClass('ready-state');
             });
         } else {
             $boxes.removeClass('is-animated')
             .fadeOut().promise().done(function() {
             $boxes.filter('[data-category = "' + $filterColor + '"]')
-                .addClass('is-animated').fadeIn().addClass('ready-state');
+                .fadeIn().addClass('ready-state');
             });
         }
     });
 
 })(jQuery);
+
+
+
+
     
 /*=============================================end============================ */
 
