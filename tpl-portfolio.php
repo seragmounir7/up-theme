@@ -53,7 +53,7 @@ get_header();
                             <?php
                                 $category = get_field( 'cat_field' );
                             ?>
-                            <article data-category="<?php echo $category ?>" class="filterDiv ready-state <?php echo $category ?>">
+                            <article data-category="<?php echo $category ?>" class="filterDiv ready-state <?php echo $category ?>" data-desc="<?php echo wp_strip_all_tags( get_the_content() ); ?>">
                                 <div class="overlay">
                                     <span><?php echo the_title(); ?></span>
                                 </div>
@@ -77,7 +77,7 @@ get_header();
         <div class="image-container">
             <img class="close-icon" src="<?php bloginfo('template_directory'); ?>/assets/img/white-close-icon.png" alt="colse icon">
             <img id="image-viewed" src="<?php bloginfo('template_directory'); ?>/assets/img/portfolio/ZENA tissues box.jpg" alt="image that you viewing">
-            <span class="title">Hello this is the title</span>
+            <span class="title"></span>
         </div>
         <div class="chevron-wrapper chevron-right-wrapper">
             <img class="chevron-right" src="<?php bloginfo('template_directory'); ?>/assets/img/chevron-right.png">

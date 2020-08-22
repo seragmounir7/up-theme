@@ -114,51 +114,106 @@ $(function(){
 
 /*=============================viewing the image===================================== */
 
+let prev_project,
+    selected_project,
+    selected_background;
+
+//choosing the project
 $('.filterDiv .overlay').on('click',function(){
-    let selected_project = $(this).parent('.filterDiv');
-    let selected_background = selected_project.find('img').attr('src');
+    selected_project = $(this).parent('.filterDiv');
+    selected_background = selected_project.find('img').attr('src');
     select_image(selected_background , selected_project);
 });
 
+//close from close icon
 $('#image-viewer .close-icon').on('click',function(){
-    $('body').removeClass('image-viewing-status');
-    $('#image-viewer').fadeOut();
-    $('.filterDiv').removeClass('chosen');
+    close_viewing_status();
 });
 
+//close from selecting on the vaccum
 $('#image-container-wrapper').on('click', function(e) {
     if (e.target !== this)
       return;
     
-      $('body').removeClass('image-viewing-status');
-      $('#image-viewer').fadeOut();
-      $('.filterDiv').removeClass('chosen');
+      close_viewing_status();
 });
-/*==========================================================end ========================*/
 
-/*=============================viewing the image===================================== */
+//select the next project from the arrow
 $('.chevron-wrapper .chevron-right').on('click',function(){
-    let prev_project = $('.chosen');
-    let selected_project = $(".ready-state").eq( $(".ready-state").index( $(prev_project) ) + 1 )
-    let selected_background = selected_project.find('img').attr('src');
-    prev_project.removeClass('chosen');
-    select_image(selected_background , selected_project);
+    select_next_image();
 });
 
+//select the prev project from the arrow
 $('.chevron-wrapper .chevron-left').on('click',function(){
-    let prev_project = $('.chosen');
-    let selected_project = $(".ready-state").eq( $(".ready-state").index( $(prev_project) ) - 1 )
-    let selected_background = selected_project.find('img').attr('src');
-    prev_project.removeClass('chosen');
-    select_image(selected_background , selected_project);
+    select_prev_image();
+});
+
+$(document).keydown(function(e) {
+    if($('body').hasClass('image-viewing-status')){
+        switch(e.which) {
+            //press on the right button in keyboard
+            case 37:
+                select_next_image();
+            break;
+
+            //press on the left button in keyboard
+            case 39:
+                select_prev_image();
+            break;
+
+            //close by the esc button
+            case 27:
+                close_viewing_status();
+            break;
+        
+            default: return;
+        }
+    }
 });
 /*==========================================================end ========================*/
 
+/*=============================the functions that used in the viewing image===================================== */
 function select_image(selected_background , selected_project){
     selected_background = selected_background.replace('url(','').replace(')','').replace(/\"/gi, "");
-    $('#image-viewer #image-container-wrapper .image-container .title').text(selected_project.find('span').text());
     $('#image-viewed').attr('src',selected_background);
     $('body').addClass('image-viewing-status');
     $('#image-viewer').fadeIn();
     selected_project.addClass('chosen');
+    $('#image-viewer #image-container-wrapper .image-container .title').text($('.chosen').data('desc'));
 }
+
+function select_prev_image(){
+    prev_project = $('.chosen');
+    selected_project = $(".ready-state").eq( $(".ready-state").index( $(prev_project) ) - 1 );
+
+    //if we reach to the limit
+    if ($(".ready-state").index( $(prev_project) ) + 1 == -1){
+        selected_project = $(".ready-state").eq($(".ready-state").length);
+    }
+    
+    selected_background = selected_project.find('img').attr('src');
+    prev_project.removeClass('chosen');
+    select_image(selected_background , selected_project);
+}
+
+function select_next_image(){
+    prev_project = $('.chosen');
+    selected_project = $(".ready-state").eq( $(".ready-state").index( $(prev_project) ) + 1 );
+
+    //if we reach to the limit
+    if($(".ready-state").index( $(prev_project) ) + 1 == $(".ready-state").length){
+        //selected_project = $(".ready-state").eq();
+        selected_project = $(".ready-state").eq(0);
+    }
+
+    selected_background = selected_project.find('img').attr('src');
+    prev_project.removeClass('chosen');
+    select_image(selected_background , selected_project);
+}
+
+function close_viewing_status(){
+    $('body').removeClass('image-viewing-status');
+    $('#image-viewer').fadeOut();
+    $('.filterDiv').removeClass('chosen');
+}
+/*==========================================================end ========================*/

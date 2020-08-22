@@ -813,7 +813,6 @@ header .fa-times {
   -o-align-items: center;
   align-items: center;
   height: 100vh;
-  margin-top: 16px;
 }
 #image-viewer #image-container-wrapper .chevron-wrapper {
   z-index: 9;
@@ -876,9 +875,14 @@ header .fa-times {
   font-size: 1.2rem;
   text-transform: capitalize;
   width: 100%;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
 }
 #image-viewer #image-container-wrapper .image-container #image-viewed {
-  height: 90vh;
+  height: 80vh;
   width: auto;
 }
 #image-viewer #image-container-wrapper .image-container .close-icon {

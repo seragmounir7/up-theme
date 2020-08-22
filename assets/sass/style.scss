@@ -647,7 +647,6 @@ header {
         @include prefixes(justify-content,center );
         @include prefixes(align-items,center );
         height: 100vh;
-        margin-top:16px;
         .chevron-wrapper {
             z-index: 9;
             
@@ -705,10 +704,11 @@ header {
                 color: #fff;
                 font-size: 1.2rem;
                 text-transform: capitalize;
-                width:100%
+                width:100%;
+                @include prefixes(transform,translateY(100%) );
             }
             #image-viewed {
-                height: 90vh;
+                height: 80vh;
                 width: auto;
             }
             .close-icon {
